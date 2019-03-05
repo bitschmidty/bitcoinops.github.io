@@ -65,7 +65,7 @@ properties:
             type: object
             properties:
               notification:
-                description: Displays notification on replacement?
+                description: If there is a notification for incoming transactions, does that notification flag RBF?
                 type: string
                 enum: &feat
                   - "true"
@@ -73,19 +73,19 @@ properties:
                   - na
                   - untested
               list: &rbf_list
-                description: FIXME
+                description: Is an incoming transaction flagged as RBF in the list of wallet transactions?
                 type: string
                 enum: *feat
               details: &rbf_details
-                description: FIXME
+                description: Is an incoming transaction flagged as RBF in the transaction details?
                 type: string
                 enum: *feat
               shows_replaced_version: &rbf_shows_replaced
-                description: FIXME
+                description: When an RBF replacement (second, higher fee) transaction arrives, does the replacement transaction show?
                 type: string
                 enum: *feat
               shows_original_version: &rbf_shows_orig
-                description: FIXME
+                description: When an RBF replacement (second, higher fee) transaction arrives, does the original transaction still show?
                 type: string
                 enum: *feat
             additionalProperties: false
@@ -95,7 +95,7 @@ properties:
             type: object
             properties:
               signals_bip125:
-                description: FIXME
+                description: Does the wallet allow the sending RBF signaled transactions in the interface?
                 type: string
                 enum: *feat
               list: *rbf_list
