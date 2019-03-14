@@ -1,6 +1,6 @@
 {{tool.description}}
 
-# Replace-by-Fee (RBF)
+## Replace-by-Fee (RBF)
 
 An unconfirmed transaction can be replaced by another version of the
 same transaction that spends the same inputs.  Most full nodes support
@@ -60,7 +60,7 @@ block chain space used, this is the most efficient form of fee bumping.
     This wallet can't reliably fee bump its own transactions
 {% endif %}
 
-## Usability
+### Usability
 
 {% for example in tool.rbf.examples %}{% capture /dev/null %}
   {% if example.link %}
@@ -73,7 +73,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 ---
 
-# Bech32
+## Bech32
 
 Pretend that this is a description of all the marvelous things that
 happen if a wallet or service supports bech32 receiving and spending
