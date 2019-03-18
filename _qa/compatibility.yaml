@@ -53,6 +53,7 @@ properties:
                 - windows
                 - android
                 - ios
+                - web
           version:
             description: the version tested
             type: string
