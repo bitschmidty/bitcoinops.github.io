@@ -1,0 +1,29 @@
+---
+name: Opendime
+internal_url: /en/compatibility/opendime
+logo: /img/logos/third-party/opendime.png
+description: >
+  TODO
+rbf:
+  tested:
+    date: "2018-10-18"
+    platforms:
+      - macos
+    version: "2.1.0"
+  features:
+    receive:
+      notification: "n/a"
+      list: "false"
+      details: "n/a"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
+    send:
+      signals_bip125: "false"
+      list: "false"
+      details: "na"
+      shows_replaced_version: "na"
+      shows_original_version: "na"
+  examples:
+    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+      caption: >
+        Sending RBF Transaction - Default wallet send screen

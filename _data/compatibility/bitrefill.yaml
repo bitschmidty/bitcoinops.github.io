@@ -1,0 +1,29 @@
+---
+name: Bitrefill
+internal_url: /en/compatibility/bitrefill
+logo: /img/logos/third-party/bitrefill.png
+description: >
+  TODO
+rbf:
+  tested:
+    date: "2018-11-06"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      notification: "n/a"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "true"
+      shows_original_version: "true"
+    send:
+      signals_bip125: "true"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "untested"
+      shows_original_version: "untested"
+  examples:
+    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+      caption: >
+        Sending RBF Transaction - Default wallet send screen

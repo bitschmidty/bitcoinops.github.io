@@ -1,0 +1,29 @@
+---
+name: Trezor
+internal_url: /en/compatibility/trezor
+logo: /img/logos/third-party/trezor.png
+description: >
+  TODO
+rbf:
+  tested:
+    date: "2018-11-08"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      notification: "n/a"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
+    send:
+      signals_bip125: "false"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "na"
+      shows_original_version: "na"
+  examples:
+    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+      caption: >
+        Sending RBF Transaction - Default wallet send screen

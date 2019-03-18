@@ -1,0 +1,29 @@
+---
+name: Copay
+internal_url: /en/compatibility/copay
+logo: /img/logos/third-party/copay.png
+description: >
+  TODO
+rbf:
+  tested:
+    date: "2018-10-02"
+    platforms:
+      - macos
+    version: "4.7.0"
+  features:
+    receive:
+      notification: "false"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "false"
+      shows_original_version: "false"
+    send:
+      signals_bip125: "false"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "na"
+      shows_original_version: "na"
+  examples:
+    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+      caption: >
+        Sending RBF Transaction - Default wallet send screen

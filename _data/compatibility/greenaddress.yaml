@@ -1,29 +1,28 @@
 ---
-name: Electrum
-internal_url: /en/compatibility/electrum
-logo: /img/logos/third-party/electrum.png
+name: GreenAddress
+internal_url: /en/compatibility/greenaddress
+logo: /img/logos/third-party/greenaddress.png
 description: >
-  [Electrum](https://electrum.org/) is an open source wallet for
-  Windows, Mac, Linux, and Android.
+  TODO
 rbf:
   tested:
-    date: "2018-08-28"
+    date: "2018-09-25"
     platforms:
-      - macos
-    version: "3.2.2"
+      - ios
+    version: "0.0.52"
   features:
     receive:
-      notification: "false"
+      notification: "na"
       list: "true"
       details: "false"
       shows_replaced_version: "true"
-      shows_original_version: "false"
+      shows_original_version: "true"
     send:
       signals_bip125: "true"
       list: "true"
       details: "false"
       shows_replaced_version: "true"
-      shows_original_version: "false"
+      shows_original_version: "true"
   examples:
     - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
       caption: >

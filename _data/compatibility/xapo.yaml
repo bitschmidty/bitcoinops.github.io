@@ -1,0 +1,29 @@
+---
+name: Xapo
+internal_url: /en/compatibility/xapo
+logo: /img/logos/third-party/xapo.png
+description: >
+  TODO
+rbf:
+  tested:
+    date: "2018-11-05"
+    platforms:
+      - ios
+    version: "4.6.1"
+  features:
+    receive:
+      notification: "false"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "true"
+      shows_original_version: "true"
+    send:
+      signals_bip125: "false"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "na"
+      shows_original_version: "na"
+  examples:
+    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+      caption: >
+        Sending RBF Transaction - Default wallet send screen
