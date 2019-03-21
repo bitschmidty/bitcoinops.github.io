@@ -35,23 +35,3 @@ td.left { text-align: left; }
 {% endfor %}
 
 </table>
-
-## Native segwit (bech32)
-
-<table>
-  <tr>
-    <th title="Name of the tool">Tool</th>
-    <th title="Can receive native segwit payments">Receive</th>
-    <th title="Allows sending to bech32 addresses">Send</th>
-  </tr>
-
-{% for wrapped_tool in site.data.compatibility %}
-  {% assign tool = wrapped_tool[1] %}
-  <tr>
-    <td class="left"><a href="{{tool.internal_url}}">{{tool.name}}</a></td>
-    <td>{% if tool.bech32.receive == true %}{{yes}}{% else %}{{no}}{% endif %}</td>
-    <td>{% if tool.bech32.send    == true %}{{yes}}{% else %}{{no}}{% endif %}</td>
-  </tr>
-{% endfor %}
-
-</table>
