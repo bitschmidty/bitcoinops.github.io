@@ -1,3 +1,5 @@
+![{{tool.name|escape_once}}]({{tool.logo}}){:.third-party-logo}
+
 {{tool.description}}
 
 ## Replace-by-Fee (RBF)
