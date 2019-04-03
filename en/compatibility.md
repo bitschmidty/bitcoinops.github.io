@@ -33,7 +33,8 @@ td.left { text-align: left; }
     <th>Shows original</th>
   </tr>
 
-{% for wrapped_tool in site.data.compatibility %}
+{% assign tools = site.data.compatibility | sort %}
+{% for wrapped_tool in tools %}
   {% assign tool = wrapped_tool[1] %}
   <tr>
     <td class="left"><a href="{{tool.internal_url}}">{{tool.name}}</a></td>
