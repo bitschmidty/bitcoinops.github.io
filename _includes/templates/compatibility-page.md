@@ -15,170 +15,172 @@ block chain space used, this is the most efficient form of fee bumping.
 {% assign rbf = tool.rbf.features. %}
 {% case rbf.receive.notification %}
   {% when "true" %}{:.feature-good}
-  - **Notifies on replacement**<br>
-    Sends a notification about replaced transactions
+  - **Notification notes RBF**<br>
+    Notification of incoming transaction notes that the transaction is RBF signaling 
   {% when "false" %}{:.feature-bad}
-  - **No notification**<br>
-    Doesn't tell you when a transaction has been replaced
+  - **Notification does not note RBF**<br>
+    Notification of incoming transaction does not note that the transaction is RBF signaling 
   {% when "na" %}{:.feature-neutral}
   - **No notification**<br>
-    There are no notifications for this wallet
+    There are no incoming transaction notifications for this service
   {% when "untested" %}{:.feature-neutral}
-  - **No replacement tagging**<br>
-    We didn’t test this
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
 {% case rbf.receive.list %}
   {% when "true" %}{:.feature-good}
-  - **Tags transaction as replacable**<br>
-    Indicates that a transaction opts into BIP125
+  - **Received transaction labeled replaceable in list**<br>
+    Visually indicates that an incoming transaction has signaled RBF
   {% when "false" %}{:.feature-bad}
-  - **BIP125 unclear**<br>
-    Doesn't tell users transactions opt-in to BIP125
+  - **Received transaction not labeled replaceable in list**<br>
+    Does not visually indicate that an incoming transaction has signaled RBF
   {% when "na" %}{:.feature-neutral}
-  - **This wallet doesn't handle unconfirmed transactions**<br>
-    This wallet doesn't indicate tranacitons opt-in to BIP125 because it
-    only deals with confirmed transactions
+  - **This services does not handle incoming transactions**<br>
+    This wallet doesn't support incoming transactions
   {% when "untested" %}{:.feature-neutral}
-  - **BIP125 tagging**<br>
-    We didn’t test this
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
 {% case rbf.receive.details %}
   {% when "true" %}{:.feature-good}
-  - **BIP125 in details**<br>
-    FIXME
+  - **Received transaction labeled replaceable in transaction details**<br>
+    Visually indicates that a received transaction has signaled RBF when viewing the transaction details
   {% when "false" %}{:.feature-bad}
-  - **No BIP125 in details**<br>
-    FIXME
+  - **Received transaction labeled replaceable in transaction details**<br>
+    Does not visually indicate that a received transaction has signaled RBF when viewing the transaction details
   {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
+  - **Does not show transaction details**<br>
+    This service does not show transaction details natively. Usually this means the service links off to a block explorer for transaction details.
   {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
-{% case rbf.receive.shows_replaced_version %}
-  {% when "true" %}{:.feature-good}
-  - **Shows replacement version**<br>
-    FIXME
-  {% when "false" %}{:.feature-bad}
-  - **Doesn't show replacement transactions**<br>
-    FIXME
-  {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
-  {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
-  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
-{% endcase %}
-
-{% case rbf.receive.shows_original_version %}
-  {% when "true" %}{:.feature-good}
-  - **Shows replaced transactions**<br>
-    FIXME
-  {% when "false" %}{:.feature-bad}
-  - **Doesn't show replaced versions**<br>
-    FIXME
-  {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
-  {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
-  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
-{% endcase %}
+{% if rbf.receive.shows_replaced_version == "true" and rbf.receive.shows_original_version == "true"  %}
+  {:.feature-good}
+  - **Shows replacement and original transactions**<br>
+    Both the original transaction and replacement transactions are shown in the
+    transaction list
+{% elsif rbf.receive.shows_replaced_version == "na" or
+    rbf.receive.shows_original_version == "na" %}
+  {:.feature-neutral}
+  - **No transaction list**<br>
+    This service does not support listing of transactions
+{% elsif rbf.receive.shows_replaced_version == "untested" or
+    rbf.receive.shows_original_version == "untested" %}
+  {:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+{% elsif rbf.receive.shows_replaced_version == "true" %}
+  {:.feature-good}
+  - **Shows replacement transaction only**<br>
+    Only the replacement transaction is shown in the transaction list. No original
+    transaction shown
+{% elsif rbf.receive.shows_original_version == "true" %}
+  {:.feature-bad}
+  - **Shows original transaction only**<br>
+    Only the original transaction shown in transaction list. Repacement transactions
+    not shown
+{% elsif rbf.receive.shows_original_version == "false" and rbf.receive.shows_replaced_version == "false" %}
+  {:.feature-bad}
+  - **No unconfirmed transactions**<br>
+    Neither the original nor replacement transactions are shown in the
+    transaction list. Most likely unconfirmed transactions are not supported
+{% else %} {% include ERROR_42_UNEXPECTED_VALUE %}
+{% endif %}
 
 ### Sending support
 
 {% case rbf.send.signals_bip125 %}
   {% when "true" %}{:.feature-good}
-  - **Signals BIP125 by default**<br>
-    FIXME
+  - **Allows sending RBF transactions**<br>
+    Allows sending of RBF transactions in the interface
   {% when "false" %}{:.feature-bad}
-  - **Doesn't signal BIP125**<br>
-    FIXME
+  - **Does not allow sending of RBF transactions**<br>
+    Does not allow sending of RBF transactions in the interface
   {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
+  - **Does not send transactions**<br>
+    Does not support sending of any transactions
   {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
+  - **Not Tested**<br>
+    We either didn’t test this or could not appropriately determine the results
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
 {% case rbf.send.list %}
   {% when "true" %}{:.feature-good}
-  - **Notes transactions are replaceable in list**<br>
-    FIXME
+  - **Sent transaction labeled replaceable in list**<br>
+    Visually indicates that an outgoing transaction has signaled RBF
   {% when "false" %}{:.feature-bad}
-  - **Doesn't indicate transactions are replacable**<br>
-    FIXME
+  - **Sent transaction not labeled replaceable in list**<br>
+    Does not visually indicate that an outgoing transaction has signaled RBF
   {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
+  - **No transaction list**<br>
+    Does not show a transaction list natively
   {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
+  - **Not Tested**<br>
+    We either didn’t test this or could not appropriately determine the results
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
 {% case rbf.send.details %}
   {% when "true" %}{:.feature-good}
-  - **Replacability info in details view**<br>
-    FIXME
+  - **Sent transaction labeled replaceable in transaction details**<br>
+    Visually indicates that a sent transaction has signaled RBF when viewing the transaction details
   {% when "false" %}{:.feature-bad}
-  - **No replacability info in details view**<br>
-    FIXME
+  - **Received transaction labeled replaceable in transaction details**<br>
+    Does not visually indicate that a sent transaction has signaled RBF when viewing the transaction details
   {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
+  - **Does not show transaction details**<br>
+    This service does not show transaction details natively. Usually this means the service links off to a block explorer for transaction details.
   {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
-{% case rbf.send.shows_replaced_version %}
-  {% when "true" %}{:.feature-good}
-  - **Shows replacement transactions**<br>
-    FIXME
-  {% when "false" %}{:.feature-bad}
-  - **Doesn't show replacement transactions**<br>
-    FIXME
-  {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
-  {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
-  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
-{% endcase %}
-
-{% case rbf.send.shows_original_version %}
-  {% when "true" %}{:.feature-good}
-  - **Shows replaced transactions**<br>
-    FIXME
-  {% when "false" %}{:.feature-bad}
-  - **Doesn't show replaced transactions**<br>
-    FIXME
-  {% when "na" %}{:.feature-neutral}
-  - **FIXME**<br>
-    FIXME
-  {% when "untested" %}{:.feature-neutral}
-  - **FIXME**<br>
-    We didn’t test this
-  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
-{% endcase %}
+{% if rbf.send.shows_replaced_version == "true" and rbf.send.shows_original_version == "true"  %}
+  {:.feature-good}
+  - **Shows replacement and original transactions**<br>
+    Both the original transaction and replacement transactions are shown in the
+    transaction list
+{% elsif rbf.send.shows_replaced_version == "na" or
+    rbf.send.shows_original_version == "na" %}
+  {:.feature-neutral}
+  - **No replacements in transaction list**<br>
+    Because no transaction replacement is possible, we could not test whether
+    original or replacement sent transactions are shown after replacement
+{% elsif rbf.send.shows_replaced_version == "untested" or
+    rbf.send.shows_original_version == "untested" %}
+  {:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+{% elsif rbf.send.shows_replaced_version == "true" %}
+  {:.feature-good}
+  - **Shows replacement transaction only**<br>
+    Only the replacement transaction is shown in the transaction list. No original
+    transaction shown
+{% elsif rbf.send.shows_original_version == "true" %}
+  {:.feature-bad}
+  - **Shows original transaction only**<br>
+    Only the original transaction shown in transaction list. Repacement transactions
+    not shown
+{% elsif rbf.send.shows_original_version == "false" and rbf.send.shows_replaced_version == "false" %}
+  {:.feature-bad}
+  - **No unconfirmed transactions**<br>
+    Neither the original nor replacement transactions are shown in the
+    transaction list. Most likely unconfirmed transactions are not supported
+{% else %} {% include ERROR_42_UNEXPECTED_VALUE %}
+{% endif %}
 
 ### Usability
 
-*Click on a thumbnail for a larger image or to the play its video.*
+*Click on a thumbnail for a larger image or to play its video.*
 
 {% for example in tool.rbf.examples %}{% capture /dev/null %}
   {% if example.link %}
