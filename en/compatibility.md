@@ -38,16 +38,16 @@ td.left { text-align: left; }
   {% assign tool = wrapped_tool[1] %}
   <tr>
     <td class="left"><a href="{{tool.internal_url}}">{{tool.name}}</a></td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.receive.notification %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.receive.list %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.receive.details %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.receive.shows_replaced_version %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.receive.shows_original_version %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.send.signals_bip125 %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.send.list %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.send.details %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.send.shows_replaced_version %}</td>
-    <td>{% include functions/compat-cell.md state=tool.rbf.features.send.shows_original_version %}</td>
+    <td><a href="{{tool.internal_url}}#receive-notification">{% include functions/compat-cell.md state=tool.rbf.features.receive.notification %}</a></td>
+    <td><a href="{{tool.internal_url}}#receive-list">{% include functions/compat-cell.md state=tool.rbf.features.receive.list %}</a></td>
+    <td><a href="{{tool.internal_url}}#receive-details">{% include functions/compat-cell.md state=tool.rbf.features.receive.details %}</a></td>
+    <td><a href="{{tool.internal_url}}#receive-replaced">{% include functions/compat-cell.md state=tool.rbf.features.receive.shows_replaced_version %}</a></td>
+    <td><a href="{{tool.internal_url}}#receive-replaced">{% include functions/compat-cell.md state=tool.rbf.features.receive.shows_original_version %}</a></td>
+    <td><a href="{{tool.internal_url}}#send-signals_bip125">{% include functions/compat-cell.md state=tool.rbf.features.send.signals_bip125 %}</a></td>
+    <td><a href="{{tool.internal_url}}#send-list">{% include functions/compat-cell.md state=tool.rbf.features.send.list %}</a></td>
+    <td><a href="{{tool.internal_url}}#send-details">{% include functions/compat-cell.md state=tool.rbf.features.send.details %}</a></td>
+    <td><a href="{{tool.internal_url}}#send-replaced">{% include functions/compat-cell.md state=tool.rbf.features.send.shows_replaced_version %}</a></td>
+    <td><a href="{{tool.internal_url}}#send-replaced">{% include functions/compat-cell.md state=tool.rbf.features.send.shows_original_version %}</a></td>
   </tr>
 {% endfor %}
 

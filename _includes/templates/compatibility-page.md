@@ -12,6 +12,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 ### Receiving support
 
+{:id="receive-notification"}
 {% assign rbf = tool.rbf.features. %}
 {% case rbf.receive.notification %}
   {% when "true" %}{:.feature-good}
@@ -29,6 +30,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
+{:id="receive-list"}
 {% case rbf.receive.list %}
   {% when "true" %}{:.feature-good}
   - **Received transaction labeled replaceable in list**<br>
@@ -45,6 +47,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
+{:id="receive-details"}
 {% case rbf.receive.details %}
   {% when "true" %}{:.feature-good}
   - **Received transaction labeled replaceable in transaction details**<br>
@@ -61,6 +64,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
+{:id="receive-replaced"}
 {% if rbf.receive.shows_replaced_version == "true" and rbf.receive.shows_original_version == "true"  %}
   {:.feature-good}
   - **Shows replacement and original transactions**<br>
@@ -96,6 +100,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 ### Sending support
 
+{:id="send-signals_bip125"}
 {% case rbf.send.signals_bip125 %}
   {% when "true" %}{:.feature-good}
   - **Allows sending RBF transactions**<br>
@@ -112,6 +117,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
+{:id="send-list"}
 {% case rbf.send.list %}
   {% when "true" %}{:.feature-good}
   - **Sent transaction labeled replaceable in list**<br>
@@ -128,6 +134,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
+{:id="send-details"}
 {% case rbf.send.details %}
   {% when "true" %}{:.feature-good}
   - **Sent transaction labeled replaceable in transaction details**<br>
@@ -144,6 +151,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
 {% endcase %}
 
+{:id="send-replaced"}
 {% if rbf.send.shows_replaced_version == "true" and rbf.send.shows_original_version == "true"  %}
   {:.feature-good}
   - **Shows replacement and original transactions**<br>
