@@ -128,14 +128,14 @@ properties:
               type: string
 
   segwit:
-    description: Container for information about segwit address support (BIP173)
+    description: Container for information about segwit support
     type: object
     additionalProperties: false
     properties:
       tested: *tested
       examples: *examples
       features:
-        description: Segwit Address features
+        description: Segwit receiving features
         type: object
         properties:
           receive:
@@ -143,7 +143,7 @@ properties:
             type: object
             properties:
               p2sh_wrapped: 
-                description: Does the wallet allow receiving to P2SH-wrapped segwit addresses?
+                description: Does the wallet allow receiving to P2SH-wrapped segwit?
                 type: string
                 enum: *feat
               bech32: 
@@ -153,7 +153,9 @@ properties:
               default: 
                 description: What is the default address receive type?
                 type: string
-                enum: *feat
+                enum:
+                  - "p2sh_wrapped"
+                  - "v0"
             additionalProperties: false
 
           send:
