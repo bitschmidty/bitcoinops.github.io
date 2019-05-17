@@ -36,5 +36,33 @@ rbf:
     - image: /img/compatibility/binance/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Replacement transaction only shows up after confirmed. Neither transaction shows before.
-
+segwit:
+  tested:
+    date: "2019-04-11"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "false"
+      default: "p2pkh"
+    send:
+      bech32: "true" 
+      change_bech32: "untested"
+  examples:
+    - image: /img/compatibility/binance/segwit/receive-screen.png
+      caption: >
+        Binance receives via P2PKH addresses. 
+    - image: /img/compatibility/binance/segwit/send-screen.png
+      caption: >
+        Default send screen accepts a bech32 address.
+    - image: /img/compatibility/binance/segwit/send-screen-error.png
+      caption: >
+        While Binance allows bech32 withdrawals, you cannot add a bech32 address
+        to your address book _from the send screen_. While attempting to add a bech32 address, after
+        the two-factor authentication code, an address error message appears.
+    - image: /img/compatibility/binance/segwit/address-book-add.png
+      caption: >
+        Bech32 addresses can be successfully added using the address book functionality.
 

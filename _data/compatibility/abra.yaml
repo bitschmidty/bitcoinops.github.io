@@ -51,10 +51,38 @@ rbf:
     - image: /img/compatibility/abra/transaction-details-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Bumped transaction details.
-
-
-
-
+segwit:
+  tested:
+    date: "2019-04-11"
+    platforms:
+      - ios
+    version: "5.11.1"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "false"
+      default: "p2pkh"
+    send:
+      bech32: "false" 
+      change_bech32: "untested"
+  examples:
+    - image: /img/compatibility/abra/segwit/receive-screen.png
+      caption: >
+        Abra uses P2PKH addresses for receiving. 
+    - image: /img/compatibility/abra/segwit/send-bech32.png  
+      caption: >
+        Abra allows a bech32 address to be input and does not provide a warning.
+        However, the review button was not enabled until a non-bech32 address
+        was provided. The eventually sent transaction used exact change so
+        change address format was not determined.
+    - image: /img/compatibility/abra/segwit/send-bech32-qr.png  
+      caption: >
+        When using the QR code scanner, an error about address format was shown
+        when scanning a bech32 address.
+    - image: /img/compatibility/abra/segwit/send-non-bech32.png  
+      caption: >
+        When using a non bech32 address, the "Review" button is enabled. Button
+        is disabled when using bech32 address format.
 
 
 

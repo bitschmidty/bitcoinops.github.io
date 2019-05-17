@@ -66,4 +66,41 @@ rbf:
         Receiving Bumped RBF Transaction - Transaction List Screen. Notes rbf transaction as well as fee size. The bumped transaction does not show up as a separate. The original transaction disappears.
     - image: /img/compatibility/electrum/transaction-details-incoming-replacement.png
       caption: >
-        Receiving Bumped RBF Transaction - Transaction details of incoming bumped RBF transaction. RBF not noted.
+        Receiving Bumped RBF Transaction - Transaction details of incoming
+        bumped RBF transaction. RBF not noted.
+segwit:
+  tested:
+    date: "2019-04-11"
+    platforms:
+      - macos
+    version: "3.3.4"
+  features:
+    receive:
+      p2sh_wrapped: "true"
+      bech32: "true"
+      default: "bech32"
+    send:
+      bech32: "true" 
+      change_bech32: "true"
+  examples:
+    - image: /img/compatibility/electrum/segwit/create-wallet.png
+      caption: >
+        Electrum prompts users to choose a wallet type. Segwit or Legacy options
+        available with Segwit as the default option.
+        available. 
+    - image: /img/compatibility/electrum/segwit/receive-screen.png
+      caption: >
+        Default receive screen when using a "Segwit" wallet uses bech32 native
+        addresses for receiving.
+    - image: /img/compatibility/electrum/segwit/create-wallet-p2sh-wrapped.png
+      caption: >
+        Electrum also [allows p2sh-wrapped segwit
+        addresses](https://bitcointalk.org/index.php?topic=3057784.msg31519322#msg31519322)
+        with a workaround.
+    - image: /img/compatibility/electrum/segwit/address-list.png
+      caption: >
+        Electrum uses the wallet type's address format for change addresses.
+        When using bech32/segwit wallet, the change addresses are bech32.
+    - image: /img/compatibility/electrum/segwit/send-screen.png
+      caption: >
+        Sending to bech32 addresses is possible from all Electrum wallet types.

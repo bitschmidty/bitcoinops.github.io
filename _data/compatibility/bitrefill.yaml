@@ -39,7 +39,27 @@ rbf:
     - image: /img/compatibility/bitrefill/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - At some point in the next day, the original transaction was marked failed and replacement transaction was credited to account and marked complete.
-
+segwit:
+  tested:
+    date: "2019-04-12"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      p2sh_wrapped: "?"
+      bech32: "false"
+      default: "?"
+    send:
+      bech32: "true" 
+      change_bech32: "true"
+  examples:
+    - image: /img/compatibility/bitrefill/segwit/receive-screen.png
+      caption: >
+        Bitrefill allows P2SH deposits. No bech32 option available.
+    - image: /img/compatibility/bitrefill/segwit/send-screen.png
+      caption: >
+        Bitrefill can send to bech32 native addresses. Change address format
 
 
 

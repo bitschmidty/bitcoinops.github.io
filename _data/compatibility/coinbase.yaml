@@ -45,7 +45,38 @@ rbf:
     - image: /img/compatibility/coinbase/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - After bumped transaction confirmed, the bumped transaction then shows up and is credited. Original transactions stays as pending. (even after 100 confirmations)
-
+segwit:
+  tested:
+    date: "2019-04-11"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      p2sh_wrapped: "true"
+      bech32: "false"
+      default: "p2sh_wrapped"
+    send:
+      bech32: "true" 
+      change_bech32: "true"
+  examples:
+    - image: /img/compatibility/coinbase/segwit/receive-screen.png
+      caption: >
+        Coinbase does not have an explicit option for receiving to bech32.
+        Coinbase using p2sh wrapped segwit addresses for receiving.
+    - image: /img/compatibility/coinbase/segwit/send-screen.png
+      caption: >
+        Coinbase allows sending to either wrapped or native segwit addresses.
+        There is also visual validation of the address format.
+    - image: /img/compatibility/coinbase/segwit/transaction-details.png
+      caption: >
+        Transaction details screen shows the bech32 address. However, the link
+        for that address uses a block explorer (blockcypher) which shows an
+        error as it does not support bech32 addresses.
+    - image: /img/compatibility/coinbase/segwit/change-address.png
+      caption: >
+        Coinbase uses bech32 for their change addresses, even when the send is
+        going to non bech32.
 
 
 

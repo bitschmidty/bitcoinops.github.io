@@ -153,11 +153,18 @@ properties:
               default: 
                 description: What is the default address receive type?
                 type: string
+<<<<<<< HEAD
                 enum:
                   - "p2sh_wrapped"
                   - "v0"
+=======
+                enum: 
+                  - "p2pkh"
+                  - "p2sh"
+                  - "p2sh-wrapped"
+                  - "bech32"
+>>>>>>> binance coinbase bitgo bitmex electrum abra segwit tests
             additionalProperties: false
-
           send:
             description: Features related to sending to segwit addresses
             type: object
