@@ -199,7 +199,10 @@ block chain space used, this is the most efficient form of fee bumping.
     {% assign link = example.image %}
   {% endif %}
 {% endcapture %}
-<p markdown="1" style="max-width: 300px; float: left; padding: 20px; text-align: center;">
+<div markdown="1" class="compat-usability">
 [![{{example.caption|escape_once}}]({{example.image}}){:width="250px"}]({{link}})
-<br /><span class="compat-caption">{{example.caption}}</span></p>
+<br /><span class="compat-caption">{{example.caption}}</span>
+</div>
+{% assign break = forloop.index | modulo:2 %}
+{% if break == 0 %}<br clear="both" />{% endif %}
 {% endfor %}
