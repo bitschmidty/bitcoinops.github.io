@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
 
 ## Replace-by-Fee (RBF)
 
-<table>
+<table class="compatibility">
   <tr>
     <th></th>
     <th colspan="5">Receiving support</th>
