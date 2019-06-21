@@ -2,6 +2,10 @@
 
 ## Replace-by-Fee (RBF)
 
+{% assign tested = tool.rbf.tested. %}
+*Tested: {{tested.platforms}} {% if tested.version
+!= "n/a" %} version {{tested.version}} {% endif %} on {{tested.date}}*
+
 An unconfirmed transaction can be replaced by another version of the
 same transaction that spends the same inputs.  Most full nodes support
 this if the earlier transaction enables [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) signaling and the
