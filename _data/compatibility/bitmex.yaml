@@ -15,7 +15,7 @@ rbf:
       notification: "na"
       list: "false"
       details: "false"
-      shows_replaced_version: "true"
+      shows_replaced_version: "false"
       shows_original_version: "false"
     send:
       signals_bip125: "false"
