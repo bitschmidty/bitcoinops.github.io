@@ -8,7 +8,7 @@
 
 **Tested on**: *{{tested.date}}*
 
-An unconfirmed transaction can be replaced by another version of the
+**What is Replace-by-Fee (RBF)?** An unconfirmed transaction can be replaced by another version of the
 same transaction that spends the same inputs.  Most full nodes support
 this if the earlier transaction enables [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) signaling and the
 replacement transaction increases the amount of fee paid.  In terms of
