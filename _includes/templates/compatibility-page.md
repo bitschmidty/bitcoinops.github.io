@@ -3,8 +3,10 @@
 ## Replace-by-Fee (RBF)
 
 {% assign tested = tool.rbf.tested. %}
-*Tested: {{tested.platforms}} {% if tested.version
-!= "n/a" %} version {{tested.version}} {% endif %} on {{tested.date}}*
+**Tested**: *{{tested.platforms}}* {% if tested.version
+!= "n/a" %} *version {{tested.version}}* {% endif %}
+
+**Tested on**: *{{tested.date}}*
 
 An unconfirmed transaction can be replaced by another version of the
 same transaction that spends the same inputs.  Most full nodes support
