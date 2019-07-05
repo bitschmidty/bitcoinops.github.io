@@ -6,17 +6,17 @@ description: >
   TODO
 rbf:
   tested:
-    date: "2018-10-04"
+    date: "2019-07-05"
     platforms:
       - web
     version: "n/a"
   features:
     receive:
-      notification: "na"
-      list: "false"
+      notification: "false"
+      list: "true"
       details: "false"
-      shows_replaced_version: "na"
-      shows_original_version: "na"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
     send:
       signals_bip125: "false"
       list: "false"
@@ -29,10 +29,14 @@ rbf:
         Sending RBF Transaction - Default send transaction screen. No RBF option.
     - image: /img/compatibility/blockchaininfo/send-screen-custom-fees.png
       caption: >
-        Bumping RBF Enabled Transaction - Send transaction. Custom transaction fee option expanded. No bump fee option available.
+        Bumping RBF Enabled Transaction - Send transaction. Custom transaction
+        fee option expanded. No bump fee option available.
+    - image: /img/compatibility/blockchaininfo/transaction-list-sent.png
+      caption: >
+        Transaction List - Sent transaction is shown. No option for RBF bumping.
     - image: /img/compatibility/blockchaininfo/transaction-list-incoming-rbf.png
       caption: >
-        Receiving RBF Transaction - Receiving RBF transaction. No RBF flag.
+        Receiving RBF Transaction - Receiving RBF transaction. RBF flag is shown.
 
 
 
