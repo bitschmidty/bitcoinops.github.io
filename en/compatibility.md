@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 { text-align: center; }
     <th colspan="5">Sending support</th>
   </tr>
   <tr>
-    <th>Tool</th>
+    <th></th>
     <th>Notification</th>
     <th>List</th>
     <th>Details</th>
