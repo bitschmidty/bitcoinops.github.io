@@ -9,6 +9,7 @@
     {% assign cell_style = "compat_no" %}
     {% assign cell_label = no %}
   {% when "na" %}
+    {% assign cell_label = "-" %}
   {% when "untested" %}
     {% assign cell_label = "?" %}
   {% else %}{% include ERROR_43_unexpected_value %}

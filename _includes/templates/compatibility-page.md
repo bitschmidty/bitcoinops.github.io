@@ -19,7 +19,7 @@ block chain space used, this is the most efficient form of fee bumping.
 {:id="receive-notification"}
 {% assign rbf = tool.rbf.features. %}
 {% case rbf.receive.notification %}
-  {% when "true" %}{:.feature-good}
+  {% when "true" %}{:.feature-yes}
   - **Notification notes RBF**<br>
     Notification of incoming transaction notes that the transaction is RBF signaling
   {% when "false" %}{:.feature-bad}
@@ -36,7 +36,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="receive-list"}
 {% case rbf.receive.list %}
-  {% when "true" %}{:.feature-good}
+  {% when "true" %}{:.feature-yes}
   - **Received transaction labeled replaceable in list**<br>
     Visually indicates that an incoming transaction has signaled RBF
   {% when "false" %}{:.feature-bad}
@@ -53,7 +53,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="receive-details"}
 {% case rbf.receive.details %}
-  {% when "true" %}{:.feature-good}
+  {% when "true" %}{:.feature-yes}
   - **Received transaction labeled replaceable in transaction details**<br>
     Visually indicates that a received transaction has signaled RBF when viewing the transaction details
   {% when "false" %}{:.feature-bad}
@@ -70,7 +70,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="receive-replaced"}
 {% if rbf.receive.shows_replaced_version == "true" and rbf.receive.shows_original_version == "true"  %}
-  {:.feature-good}
+  {:.feature-yes}
   - **Shows replacement and original transactions**<br>
     Both the original transaction and replacement transactions are shown in the
     transaction list
@@ -85,7 +85,7 @@ block chain space used, this is the most efficient form of fee bumping.
   - **Not tested**<br>
     We either didn’t test this or could not appropriately determine the results
 {% elsif rbf.receive.shows_replaced_version == "true" %}
-  {:.feature-good}
+  {:.feature-yes}
   - **Shows replacement transaction only**<br>
     Only the replacement transaction is shown in the transaction list. No original
     transaction shown
@@ -106,7 +106,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="send-signals_bip125"}
 {% case rbf.send.signals_bip125 %}
-  {% when "true" %}{:.feature-good}
+  {% when "true" %}{:.feature-yes}
   - **Signals BIP125 replacability when sending transactions**<br>
     Allows sending of BIP125 opt-in-RBF transactions in the interface
   {% when "false" %}{:.feature-bad}
@@ -123,7 +123,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="send-list"}
 {% case rbf.send.list %}
-  {% when "true" %}{:.feature-good}
+  {% when "true" %}{:.feature-yes}
   - **Sent transaction labeled replaceable in list**<br>
     Visually indicates that an outgoing transaction has signaled RBF
   {% when "false" %}{:.feature-bad}
@@ -140,7 +140,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="send-details"}
 {% case rbf.send.details %}
-  {% when "true" %}{:.feature-good}
+  {% when "true" %}{:.feature-yes}
   - **Sent transaction labeled replaceable in transaction details**<br>
     Visually indicates that a sent transaction has signaled RBF when viewing the transaction details
   {% when "false" %}{:.feature-bad}
@@ -157,7 +157,7 @@ block chain space used, this is the most efficient form of fee bumping.
 
 {:id="send-replaced"}
 {% if rbf.send.shows_replaced_version == "true" and rbf.send.shows_original_version == "true"  %}
-  {:.feature-good}
+  {:.feature-yes}
   - **Shows replacement and original transactions**<br>
     Both the original transaction and replacement transactions are shown in the
     transaction list
@@ -173,7 +173,7 @@ block chain space used, this is the most efficient form of fee bumping.
   - **Not tested**<br>
     We either didn’t test this or could not appropriately determine the results
 {% elsif rbf.send.shows_replaced_version == "true" %}
-  {:.feature-good}
+  {:.feature-yes}
   - **Shows replacement transaction only**<br>
     Only the replacement transaction is shown in the transaction list. No original
     transaction shown

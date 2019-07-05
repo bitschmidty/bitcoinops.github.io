@@ -4,7 +4,7 @@ title: Compatibility Comparison
 permalink: /en/compatibility/
 nowrap: true
 ---
-{% assign yes = '<span class="feature-good"><strong>✓</strong></span>' %}
+{% assign yes = '<span class="feature-yes"><strong>✓</strong></span>' %}
 {% assign no = '<span class="feature-bad"><strong>✕</strong></span>' %}
 <style>
 th, td { text-align: center; }

@@ -5,6 +5,9 @@
 @import "minima";
 @import "vendor/font-awesome/font-awesome";
 
+$compatibility-feature-yes: #c0ceff;
+$compatibility-feature-bad: #f8ffc0;
+
 .center {
     text-align: center;
 }
@@ -142,11 +145,11 @@ div.xoverflow {
   code { font-size: 80%; }
 }
 
-.feature-good strong {
-  border-bottom: 2px solid palegreen;
+.feature-yes strong {
+  border-bottom: 2px solid $compatibility-feature-yes;
 }
 .feature-bad strong {
-  border-bottom: 2px solid pink;
+  border-bottom: 2px solid $compatibility-feature-bad;
 }
 .feature-neutral strong {
   border-bottom: 2px solid lightgray;
@@ -168,11 +171,11 @@ div.xoverflow {
 }
 
 td.compat_yes {
-  background-color: palegreen;
+  background-color: $compatibility-feature-yes;
 }
 
 td.compat_no {
-  background-color: pink;
+  background-color: $compatibility-feature-bad;
 }
 
 td.compat {
