@@ -22,13 +22,13 @@ block chain space used, this is the most efficient form of fee bumping.
 {% elsif notification == "na" %}
   {:.feature-neutral}
   - **No notification**<br>
-    There are no notifications for this wallet   
+    There are no notifications for this wallet
 {% else %}
   {:.feature-neutral}
   - **No replacement tagging**<br>
     We didn’t test this 
 {% endif %}   
-       
+
 {% if tool.rbf.list == true %}
   {:.feature-good}
   - **Tags replacable transactions**<br>
@@ -66,7 +66,7 @@ block chain space used, this is the most efficient form of fee bumping.
 {% else %}
   {:.feature-bad}
   - **Does not use BIP125 opt-in RBF**<br>
-    This wallet can't reliably fee bump its own transactions    
+    This wallet can't reliably fee bump its own transactions
 {% endif %}
 
 ### Usability
