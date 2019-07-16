@@ -1,0 +1,32 @@
+---
+name: Bitcoin Core Wallet
+internal_url: /en/compatibility/bitcoin-core
+description: >
+  [Bitcoin Core](https://bitcoincore.org/) is an open source full
+  verification node that provides a built-in wallet.  It's compatible
+  with Windows, Linux, macOS, and several less common operating systems.
+
+rbf:
+ notification: true
+ list: false
+ details: true
+ bumped_versions: true
+ send: true
+ examples:
+   - image: https://via.placeholder.com/150?text=Look+at+this
+     caption: >
+       Some text description of the screenshot or video of
+       usability.
+
+   - image: https://via.placeholder.com/150?text=You+can+click
+     caption:  >
+       Etc.....
+
+   - image: https://via.placeholder.com/150?text=Click+for+video
+     link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+     caption: >
+       Etc.....
+
+bech32:
+  receive: true
+  send: true

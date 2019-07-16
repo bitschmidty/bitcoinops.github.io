@@ -1,0 +1,31 @@
+---
+name: Electrum
+internal_url: /en/compatibility/electrum
+description: >
+  [Electrum](https://electrum.org/) is an open source wallet for
+  Windows, Mac, Linux, and Android.
+
+rbf:
+ notification: true
+ list: true
+ details: true
+ bumped_versions: false
+ send: true
+ examples:
+   - image: https://via.placeholder.com/150?text=Look+at+this
+     caption: >
+       Some text description of the screenshot or video of
+       usability.
+
+   - image: https://via.placeholder.com/150?text=You+can+click
+     caption:  >
+       Etc.....
+
+   - image: https://via.placeholder.com/150?text=Click+for+video
+     link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+     caption: >
+       Etc.....
+
+bech32:
+  receive: true
+  send: true
