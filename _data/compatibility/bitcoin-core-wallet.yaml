@@ -1,32 +1,44 @@
 ---
 name: Bitcoin Core Wallet
 internal_url: /en/compatibility/bitcoin-core
+logo: /img/logos/third-party/bitcoin-core.png
 description: >
   [Bitcoin Core](https://bitcoincore.org/) is an open source full
   verification node that provides a built-in wallet.  It's compatible
   with Windows, Linux, macOS, and several less common operating systems.
-
 rbf:
- notification: true
- list: false
- details: true
- bumped_versions: true
- send: true
- examples:
-   - image: https://via.placeholder.com/150?text=Look+at+this
-     caption: >
-       Some text description of the screenshot or video of
-       usability.
-
-   - image: https://via.placeholder.com/150?text=You+can+click
-     caption:  >
-       Etc.....
-
-   - image: https://via.placeholder.com/150?text=Click+for+video
-     link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-     caption: >
-       Etc.....
-
+  tested:
+    date: "2019-02-20"
+    platforms:
+      - linux
+      - macos
+    version: "0.1.2.3"
+  features:
+    receive:
+      notification: "true"
+      list: "false"
+      details: "true"
+      shows_replaced_version: "true"
+      shows_original_version: "true"
+    send:
+      signals_bip125: "na"  # default in GUI, not default from CLI
+      list: "true"
+      details: "true"
+      shows_replaced_version: "true"
+      shows_original_version: "true"
+  examples:
+    - image: /img/compatibility/fixme.png
+      caption: >
+        Some text description of the screenshot or video of
+        usability.
+    - image: /img/compatibility/fixme.png
+      caption: >
+        Etc.....
+    - image: /img/compatibility/fixme.png
+      link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+      caption: >
+        Etc.....
 bech32:
-  receive: true
-  send: true
+  features:
+    receive: "true"
+    send: "true"
