@@ -1,0 +1,46 @@
+---
+name: Trezor
+internal_url: /en/compatibility/trezor
+logo: /img/logos/third-party/trezor.png
+description: >
+  TODO
+rbf:
+  tested:
+    date: "2018-11-08"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      notification: "na"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
+    send:
+      signals_bip125: "false"
+      list: "false"
+      details: "false"
+      shows_replaced_version: "na"
+      shows_original_version: "na"
+  examples:
+    - image: /img/compatibility/trezor/send-screen.png
+      caption: >
+        Sending RBF Transaction - Send transaction screen. Fee options. No RBF options. Transaction not sent RBF.
+    - image: /img/compatibility/trezor/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction list screen showing sent transaction. No bumping options.
+    - image: /img/compatibility/trezor/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming transaction list. No RBF flag.
+    - image: /img/compatibility/trezor/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Trezor block explorer for incoming RBF transaction.
+    - image: /img/compatibility/trezor/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Bumped transaction replaces original transaction. Block explorer no longer finds original transaction either.
+
+
+
+
+
