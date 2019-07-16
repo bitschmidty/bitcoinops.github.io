@@ -160,10 +160,28 @@ div.xoverflow {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border:1px solid #e8e8e8;
   padding:20px
 }
 
 :target {
   background-color: #daf8fa;
+}
+
+td.compat_yes {
+  background-color: palegreen;
+}
+
+td.compat_no {
+  background-color: pink;
+}
+
+td.compat {
+  margin: 0;
+  padding: 0;
+  font-size: 125%;
+}
+
+span.compat-caption {
+  font-size: 75%;
+  font-style: italic;
 }

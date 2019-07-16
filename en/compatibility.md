@@ -2,13 +2,13 @@
 layout: page
 title: Compatibility Comparison
 permalink: /en/compatibility/
-foo: bar
+nowrap: true
 ---
 {% assign yes = '<span class="feature-good"><strong>✓</strong></span>' %}
 {% assign no = '<span class="feature-bad"><strong>✕</strong></span>' %}
 <style>
 th, td { text-align: center; }
-td.left { text-align: left; }
+h1, h2, h3, h4, h5, h6 { text-align: center; }
 </style>
 
 ## Replace-by-Fee (RBF)
@@ -37,17 +37,17 @@ td.left { text-align: left; }
 {% for wrapped_tool in tools %}
   {% assign tool = wrapped_tool[1] %}
   <tr>
-    <td class="left"><a href="{{tool.internal_url}}">{{tool.name}}</a></td>
-    <td><a href="{{tool.internal_url}}#receive-notification">{% include functions/compat-cell.md state=tool.rbf.features.receive.notification %}</a></td>
-    <td><a href="{{tool.internal_url}}#receive-list">{% include functions/compat-cell.md state=tool.rbf.features.receive.list %}</a></td>
-    <td><a href="{{tool.internal_url}}#receive-details">{% include functions/compat-cell.md state=tool.rbf.features.receive.details %}</a></td>
-    <td><a href="{{tool.internal_url}}#receive-replaced">{% include functions/compat-cell.md state=tool.rbf.features.receive.shows_replaced_version %}</a></td>
-    <td><a href="{{tool.internal_url}}#receive-replaced">{% include functions/compat-cell.md state=tool.rbf.features.receive.shows_original_version %}</a></td>
-    <td><a href="{{tool.internal_url}}#send-signals_bip125">{% include functions/compat-cell.md state=tool.rbf.features.send.signals_bip125 %}</a></td>
-    <td><a href="{{tool.internal_url}}#send-list">{% include functions/compat-cell.md state=tool.rbf.features.send.list %}</a></td>
-    <td><a href="{{tool.internal_url}}#send-details">{% include functions/compat-cell.md state=tool.rbf.features.send.details %}</a></td>
-    <td><a href="{{tool.internal_url}}#send-replaced">{% include functions/compat-cell.md state=tool.rbf.features.send.shows_replaced_version %}</a></td>
-    <td><a href="{{tool.internal_url}}#send-replaced">{% include functions/compat-cell.md state=tool.rbf.features.send.shows_original_version %}</a></td>
+    <td><a href="{{tool.internal_url}}">{{tool.name}}</a></td>
+    {% include functions/compat-cell.md state=tool.rbf.features.receive.notification anchor="#receive-notification" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.receive.list anchor="#receive-list" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.receive.details anchor="#receive-details" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.receive.shows_replaced_version anchor="#receive-replaced" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.receive.shows_original_version anchor="#receive-replaced" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.send.signals_bip125 anchor="#send-signals_bip125" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.send.list anchor="#send-list" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.send.details anchor="#send-details" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.send.shows_replaced_version anchor="#send-replaced" %}
+    {% include functions/compat-cell.md state=tool.rbf.features.send.shows_original_version anchor="#send-replaced" %}
   </tr>
 {% endfor %}
 

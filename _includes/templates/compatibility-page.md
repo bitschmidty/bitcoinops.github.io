@@ -1,6 +1,4 @@
-![{{tool.name|escape_once}}]({{tool.logo}}){:.third-party-logo}
-
-{{tool.description}}
+![{{tool.name|escape_once}}]({{tool.logo}}){:.third-party-logo}{:title="{{tool.name}}"}
 
 ## Replace-by-Fee (RBF)
 
@@ -17,10 +15,10 @@ block chain space used, this is the most efficient form of fee bumping.
 {% case rbf.receive.notification %}
   {% when "true" %}{:.feature-good}
   - **Notification notes RBF**<br>
-    Notification of incoming transaction notes that the transaction is RBF signaling 
+    Notification of incoming transaction notes that the transaction is RBF signaling
   {% when "false" %}{:.feature-bad}
   - **Notification does not note RBF**<br>
-    Notification of incoming transaction does not note that the transaction is RBF signaling 
+    Notification of incoming transaction does not note that the transaction is RBF signaling
   {% when "na" %}{:.feature-neutral}
   - **No notification**<br>
     There are no incoming transaction notifications for this service
@@ -53,7 +51,7 @@ block chain space used, this is the most efficient form of fee bumping.
   - **Received transaction labeled replaceable in transaction details**<br>
     Visually indicates that a received transaction has signaled RBF when viewing the transaction details
   {% when "false" %}{:.feature-bad}
-  - **Received transaction labeled replaceable in transaction details**<br>
+  - **Received transaction not labeled replaceable in transaction details**<br>
     Does not visually indicate that a received transaction has signaled RBF when viewing the transaction details
   {% when "na" %}{:.feature-neutral}
   - **Does not show transaction details**<br>
@@ -103,11 +101,11 @@ block chain space used, this is the most efficient form of fee bumping.
 {:id="send-signals_bip125"}
 {% case rbf.send.signals_bip125 %}
   {% when "true" %}{:.feature-good}
-  - **Allows sending RBF transactions**<br>
-    Allows sending of RBF transactions in the interface
+  - **Signals BIP125 replacability when sending transactions**<br>
+    Allows sending of BIP125 opt-in-RBF transactions in the interface
   {% when "false" %}{:.feature-bad}
-  - **Does not allow sending of RBF transactions**<br>
-    Does not allow sending of RBF transactions in the interface
+  - **Does not signal BIP125 replacability when sending transactions**<br>
+    Does not allow sending of BIP125 opt-in-RBF transactions in the interface
   {% when "na" %}{:.feature-neutral}
   - **Does not send transactions**<br>
     Does not support sending of any transactions
@@ -140,7 +138,7 @@ block chain space used, this is the most efficient form of fee bumping.
   - **Sent transaction labeled replaceable in transaction details**<br>
     Visually indicates that a sent transaction has signaled RBF when viewing the transaction details
   {% when "false" %}{:.feature-bad}
-  - **Received transaction labeled replaceable in transaction details**<br>
+  - **Sent transaction not labeled replaceable in transaction details**<br>
     Does not visually indicate that a sent transaction has signaled RBF when viewing the transaction details
   {% when "na" %}{:.feature-neutral}
   - **Does not show transaction details**<br>
@@ -197,7 +195,7 @@ block chain space used, this is the most efficient form of fee bumping.
     {% assign link = example.image %}
   {% endif %}
 {% endcapture %}
-<div markdown="1" style="max-width: 300px; float: left; padding: 20px;">
+<p markdown="1" style="max-width: 300px; float: left; padding: 20px; text-align: center;">
 [![{{example.caption|escape_once}}]({{example.image}}){:width="250px"}]({{link}})
-<br />{{example.caption}}</div>
+<br /><span class="compat-caption">{{example.caption}}</span></p>
 {% endfor %}
