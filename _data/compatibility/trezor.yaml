@@ -12,7 +12,7 @@ rbf:
     version: "n/a"
   features:
     receive:
-      notification: "n/a"
+      notification: "na"
       list: "false"
       details: "false"
       shows_replaced_version: "true"

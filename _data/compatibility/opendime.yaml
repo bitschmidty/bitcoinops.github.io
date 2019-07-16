@@ -12,9 +12,9 @@ rbf:
     version: "2.1.0"
   features:
     receive:
-      notification: "n/a"
+      notification: "na"
       list: "false"
-      details: "n/a"
+      details: "na"
       shows_replaced_version: "true"
       shows_original_version: "false"
     send:

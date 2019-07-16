@@ -12,7 +12,7 @@ rbf:
     version: "5.4.0"
   features:
     receive:
-      notification: "n/a"
+      notification: "na"
       list: "false"
       details: "false"
       shows_replaced_version: "false"

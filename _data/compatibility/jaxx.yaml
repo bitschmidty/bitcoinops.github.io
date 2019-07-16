@@ -8,11 +8,11 @@ rbf:
   tested:
     date: "2018-11-07"
     platforms:
-      - iOS
+      - ios
     version: "2.0.5"
   features:
     receive:
-      notification: "n/a"
+      notification: "na"
       list: "false"
       details: "false"
       shows_replaced_version: "true"
