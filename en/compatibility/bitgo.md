@@ -1,6 +1,5 @@
 ---
 layout: page
-title: BitGo
 permalink: /en/compatibility/bitgo/
 ---
 {% assign tool = site.data.compatibility.bitgo %}

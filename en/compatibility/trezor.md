@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Trezor
 permalink: /en/compatibility/trezor/
 ---
 {% assign tool = site.data.compatibility.trezor %}

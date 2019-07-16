@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Mycelium
 permalink: /en/compatibility/mycelium/
 ---
 {% assign tool = site.data.compatibility.mycelium %}

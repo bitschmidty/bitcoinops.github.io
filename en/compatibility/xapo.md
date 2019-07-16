@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Xapo
 permalink: /en/compatibility/xapo/
 ---
 {% assign tool = site.data.compatibility.xapo %}

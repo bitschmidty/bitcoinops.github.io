@@ -1,6 +1,5 @@
 ---
 layout: page
-title: GreenAddress
 permalink: /en/compatibility/greenaddress/
 ---
 {% assign tool = site.data.compatibility.greenaddress %}

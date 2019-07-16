@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Bitcoin Core
 
 permalink: /en/compatibility/bitcoin-core/
 ---

@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Bitrefill
 permalink: /en/compatibility/bitrefill/
 ---
 {% assign tool = site.data.compatibility.bitrefill %}
