@@ -24,6 +24,7 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/bitmex/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Send Transaction screen. Transactions sent out of BitMEX are not RBF signaled. BitMEX only accepts confirmed transactions.
+

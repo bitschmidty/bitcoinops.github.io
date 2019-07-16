@@ -24,6 +24,31 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/coinbase/send-screen-default.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen.
+    - image: /img/compatibility/coinbase/send-confirm.png
+      caption: >
+        Sending RBF Transaction - Send transaction confirmation screen. Shows fees. No RBF flag. Transaction sent without RBF signaled.
+    - image: /img/compatibility/coinbase/transaction-details-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction not sent with RBF so no bumping possible.
+    - image: /img/compatibility/coinbase/transaction-details-sent-2.png
+      caption: >
+        Bumping RBF Transaction - After a period of time the View Transaction link shows up.
+    - image: /img/compatibility/coinbase/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming RBF transaction list. No RBF label.
+    - image: /img/compatibility/coinbase/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming RBF transaction details. No RBF label. Further transaction details are at blockcypher explorer which does not label RBF transactions.
+    - image: /img/compatibility/coinbase/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - After bumped transaction confirmed, the bumped transaction then shows up and is credited. Original transactions stays as pending. (even after 100 confirmations)
+
+
+
+
+
+
+

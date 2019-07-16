@@ -24,6 +24,17 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/opendime/sending-instructions.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Opendime does not have send transaction capabilities. You need to sweep the private key to use in a regular wallet.
+    - image: /img/compatibility/opendime/sending-script.png
+      caption: >
+        Sending RBF Transaction - There is a balance.py python script which can send a transaction using pycoin but does not specify RBF when creating a transaction.
+    - image: /img/compatibility/opendime/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Opendime uses a simple address explorer on opendime.com. No RBF Flag. OPENDIME’s simple transaction list explorer does not provide RBF flag notice. However there are links to other explorers on the page (Blockchain.info, Blocktrail, LocalBitcoins, BitInfoCharts, a BIP122 link)
+    - image: /img/compatibility/opendime/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list screen when a transaction has been bumped. Bottom transaction is the bumped fee transaction. Original transaction does not show up in list anymore.
+
+

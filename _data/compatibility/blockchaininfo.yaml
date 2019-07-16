@@ -24,6 +24,15 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/blockchaininfo/send-default-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen. No RBF option.
+    - image: /img/compatibility/blockchaininfo/send-screen-custom-fees.png
+      caption: >
+        Bumping RBF Enabled Transaction - Send transaction. Custom transaction fee option expanded. No bump fee option available.
+    - image: /img/compatibility/blockchaininfo/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Receiving RBF transaction. No RBF flag.
+
+
+

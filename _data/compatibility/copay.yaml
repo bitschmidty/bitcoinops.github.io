@@ -24,6 +24,38 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/copay/default-send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send screen. No RBF options.
+    - image: /img/compatibility/copay/send-miner-fee-options.png
+      caption: >
+        Sending RBF Transaction - Miner fee detail options
+    - image: /img/compatibility/copay/send-fee-level-options.png
+      caption: >
+        Sending RBF Transaction - Fee level dropdown options
+    - image: /img/compatibility/copay/send-dialog-custom-fee-level.png
+      caption: >
+        Sending RBF Transaction - Dialog box for custom fee level
+    - image: /img/compatibility/copay/transaction-list-sent.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transactions list
+    - image: /img/compatibility/copay/transaction-details-sent.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction details of sent transaction. No bumping available. NOTE Transactions not sent with RBF enabled.
+    - image: /img/compatibility/copay/transaction-details-sent-warning.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transactions details screen of sent transaction with “Amount too low to spend” warning message. Learn more link [goes here](https://support.bitpay.com/hc/en-us/articles/115004497783-What-does-the-BitPay-wallet-s-warning-amount-too-low-to-spend-mean-). Error message doesn’t make sense given a ~$7 transactions size. Note fee was 3 sat/byle.
+    - image: /img/compatibility/copay/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Transaction list does not show any unconfirmed transactions.
+    - image: /img/compatibility/copay/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Transaction details do not show that the transaction was RBF enabled.
+
+
+
+
+
+
+
+

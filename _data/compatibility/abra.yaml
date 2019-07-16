@@ -24,6 +24,39 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/abra/send-screen-default.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen
+    - image: /img/compatibility/abra/send-confirm.png
+      caption: >
+        Sending RBF Transaction - Send transaction confirmation screen.
+    - image: /img/compatibility/abra/send-fee-notice.png
+      caption: >
+        Sending RBF Transaction - Network fee notice details.
+    - image: /img/compatibility/abra/transaction-list-sent.png
+      caption: >
+        Sending RBF Transaction - Transaction list screen showing sent transaction. No RBF notice.
+    - image: /img/compatibility/abra/transaction-details-sent.png
+      caption: >
+        Sending RBF Transaction - Sent transaction details. No RBF notice. Note transaction sent without RBF flag. Transaction was not sent with RBF so no bumping available.
+    - image: /img/compatibility/abra/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Abra does not show unconfirmed transactions.
+    - image: /img/compatibility/abra/notification-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - When the bumped transaction receives 1 confirmation it appear in wallet. No RBF notice.
+    - image: /img/compatibility/abra/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list screen. No RBF flag.
+    - image: /img/compatibility/abra/transaction-details-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Bumped transaction details.
+
+
+
+
+
+
+
+
+

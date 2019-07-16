@@ -24,6 +24,49 @@ rbf:
       shows_replaced_version: "untested"
       shows_original_version: "untested"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/conio/send-screen-default.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen. No RBF options. Transaction is sent with RBF signaled.
+    - image: /img/compatibility/conio/transaction-details-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction details screen for a sent and unconfirmed transaction. Cannot get Send Faster button enabled even when funds to bump are available.
+    - image: /img/compatibility/conio/notification-incoming-rbf.png
+      caption: >
+        Bumping RBF Transaction - Notice of incoming transaction. No RBF flag.
+    - image: /img/compatibility/conio/transaction-list-incoming-rbf.png
+      caption: >
+        Bumping RBF Transaction - Transaction list screen showing incoming RBF enabled transaction. No RBF flag.
+    - image: /img/compatibility/conio/transaction-details-incoming-rbf.png
+      caption: >
+        Bumping RBF Transaction - Transaction details of incoming transaction. No RBF signaled. "Receive Faster" for CPFP.
+    - image: /img/compatibility/conio/transaction-details-incoming-rbf-2.png
+      caption: >
+        Bumping RBF Transaction - More transaction details.
+    - image: /img/compatibility/conio/transaction-details-incoming-rbf-3.png
+      caption: >
+        Bumping RBF Transaction - More transaction details. After a period of time the Receive Faster button was now enabled.
+    - image: /img/compatibility/conio/transaction-details-incoming-rbf-receive-faster.png
+      caption: >
+        Bumping RBF Transaction - Transaction details showing Receive Faster options.
+    - image: /img/compatibility/conio/notification-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Receiving bumped transaction shows “Incoming” amount as the sum of the original and replacement transaction.
+    - image: /img/compatibility/conio/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Both original and replacement transaction show in transaction list screen.
+    - image: /img/compatibility/conio/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - After replacement transaction confirms, the original is removed from the list.
+    - image: /img/compatibility/conio/transaction-details-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Additional transaction details available once transaction was confirmed.
+
+
+
+ 
+
+ 
+
+ 
+
+

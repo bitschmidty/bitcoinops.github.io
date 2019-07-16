@@ -24,6 +24,31 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/edge/send-screen-default.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default Send screen. No option for RBF.
+    - image: /img/compatibility/edge/send-context-fees-menu.png
+      caption: >
+        Sending RBF Transaction - Context menu for send transaction show mining fee options.
+    - image: /img/compatibility/edge/send-change-mining-fee.png
+      caption: >
+        Sending RBF Transaction - Mining fee options dialog.
+    - image: /img/compatibility/edge/send-custom-mining-fee.png
+      caption: >
+        Sending RBF Transaction - Mining fee custom dialog.
+    - image: /img/compatibility/edge/transaction-details-sent.png
+      caption: >
+        Bumping RBF Enabled Transaction - Mining fee custom dialog.
+    - image: /img/compatibility/edge/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Receiving RBF enabled transaction. No RBF Flag.
+    - image: /img/compatibility/edge/transaction-details-incoming-rbf-advanced.png
+      caption: >
+        Receiving RBF Transaction - Transaction details for received RBF transaction. Links to blockchair.com explorer.
+    - image: /img/compatibility/edge/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list with top 2 transactions being the original and bumped RBF transaction. No RBF flag. Note that the balance only went up by the value of one of the transactions.
+
+
+
+

@@ -24,6 +24,9 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/jaxx/transaction-list-incoming-rbf.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Receiving RBF Transaction - Transaction list showing incoming transaction. RBF not noted.
+    - image: /img/compatibility/jaxx/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Replacement transaction shown, original disappears.

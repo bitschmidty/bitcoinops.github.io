@@ -24,6 +24,23 @@ rbf:
       shows_replaced_version: "untested"
       shows_original_version: "untested"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/bitrefill/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen. No RBF info. Transaction was sent via RBF.
+    - image: /img/compatibility/bitrefill/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction list screen. No way to manually bump the transaction. Was sent RBF.
+    - image: /img/compatibility/bitrefill/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - No incoming transactions show initially during original transaction. This delay could have been related to delays in relaying the transaction in the Bitcoin network.
+    - image: /img/compatibility/bitrefill/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - After replacement transaction was broadcast, both transactions show up as pending. Stayed as pending even after the replacement transaction confirmed 6+.
+    - image: /img/compatibility/bitrefill/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - At some point in the next day, the original transaction was marked failed and replacement transaction was credited to account and marked complete.
+
+
+
+
+

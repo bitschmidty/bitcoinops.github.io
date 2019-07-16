@@ -24,6 +24,97 @@ rbf:
       shows_replaced_version: "true"
       shows_original_version: "true"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/greenaddress/settings-transaction-replacement.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Sending with transaction replacement is “ON” under Settings by default
+    - image: /img/compatibility/greenaddress/default-send-transaction-screen.png
+      caption: >
+        Sending RBF Transaction - Default Send transaction screen
+    - image: /img/compatibility/greenaddress/send-transaction-screen-advanced.png
+      caption: >
+        Sending RBF Transaction - Advanced details on send transaction screen.
+    - image: /img/compatibility/greenaddress/transaction-send-confirmation-prompt.png
+      caption: >
+        Sending RBF Transaction - Transaction send confirmation prompt.
+    - image: /img/compatibility/greenaddress/transaction-list-bump-fee.png
+      caption: >
+        Sending RBF Transaction - Transaction list showing “bump fee” option for unconfirmed transaction.
+    - image: /img/compatibility/greenaddress/sent-transaction-details.png
+      caption: >
+        Sending RBF Transaction - Transaction details. RBF replaceable not flagged.
+    - image: /img/compatibility/greenaddress/transaction-list-bump-fee-context-menu.png
+      caption: >
+        Bumping RBF Enabled Transaction - Bump fee context menu options.
+    - image: /img/compatibility/greenaddress/replacement-transaction-details.png
+      caption: >
+        Bumping RBF Enabled Transaction - Bump transaction details confirmation. Notes “Previous fee:” field as well as language about bumping.
+    - image: /img/compatibility/greenaddress/2fa-prompt.png
+      caption: >
+        Bumping RBF Enabled Transaction - 2FA prompted for bumped transactions as well.
+    - image: /img/compatibility/greenaddress/transaction-list-replacement-tx.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction list with bumped transaction on top. Bump fee available again. Show replaced transaction button shows as well.
+    - image: /img/compatibility/greenaddress/transaction-list-show-replaced.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction list with bumped transactions “show replaced” button clicked. NOTE while testing, I inadvertently bumped twice so 2 bumped transactions appear here.
+    - image: /img/compatibility/greenaddress/transaction-details-original-tx.png
+      caption: >
+        Bumping RBF Enabled Transaction - Original transaction as viewed from the “show replaced” list. “Double spend by txhash” field has “update” value.
+    - image: /img/compatibility/greenaddress/transaction-details-replacement-tx.png
+      caption: >
+        Bumping RBF Enabled Transaction - Replacement “bumped” transaction. “Double spend by txhash” field has “update” value.
+    - image: /img/compatibility/greenaddress/transaction-list-subsequent-replacement-fees.png
+      caption: >
+        Bumping RBF Enabled Transaction - Subsequent bumping on the same transaction has a different “bump fee” context menu options. Also the context menu notes “fee already at 1-conf-estimate level”
+    - image: /img/compatibility/greenaddress/transaction-list-rbf-incoming.png
+      caption: >
+        Receiving RBF Transaction - Transaction List Screen. “Replaceable” noted.
+    - image: /img/compatibility/greenaddress/transaction-details-rbf-incoming-1.png
+      caption: >
+        Receiving RBF Transaction - Transaction details do not flag RBF (or unconfirmed)
+    - image: /img/compatibility/greenaddress/transaction-details-rbf-incoming-2.png
+      caption: >
+        Receiving RBF Transaction - Transaction details do not flag RBF (or unconfirmed)
+    - image: /img/compatibility/greenaddress/transaction-list-incoming-replacement-tx.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction List Screen. Notes RBF(“replaceable”) transaction as well as double spend transaction. The bumped transaction also shows up as separate.
+    - image: /img/compatibility/greenaddress/transaction-details-incoming-replacement-tx-1.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction details for bumped transaction. No RBF note or double spend note. Does show “double spend by txhash” field which points to original transaction
+    - image: /img/compatibility/greenaddress/transaction-details-incoming-replacement-tx-2.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction details for bumped transaction. No RBF note or double spend note. Does show “double spend by txhash” field which points to original transaction
+    - image: /img/compatibility/greenaddress/transaction-details-incoming-original-tx-1.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction details for original transaction. No RBF note or double spend note. Does show “double spend by txhash” field which points to new, bumped, transaction
+    - image: /img/compatibility/greenaddress/transaction-details-incoming-original-tx-2.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction details for original transaction. No RBF note or double spend note. Does show “double spend by txhash” field which points to new, bumped, transaction
+    - image: /img/compatibility/greenaddress/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list after the bumped transaction confirms. “Original” transaction doesn’t appear.
+    - image: /img/compatibility/greenaddress/transaction-details-bumped-confirmed-tx.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction details for confirmed, bumped transaction. No note of double spend or RBF. “double spend by txhash” field disappears.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

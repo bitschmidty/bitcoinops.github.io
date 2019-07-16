@@ -6,24 +6,75 @@ description: >
   TODO
 rbf:
   tested:
-    date: "2018-10-10"
+    date: "2018-10-25"
     platforms:
-      - ios
+      - android
     version: "3.3.2"
   features:
     receive:
       notification: "false"
       list: "false"
-      details: "false"
+      details: "na"
       shows_replaced_version: "true"
       shows_original_version: "true"
     send:
-      signals_bip125: "false"
+      signals_bip125: "true"
       list: "false"
-      details: "false"
-      shows_replaced_version: "na"
-      shows_original_version: "na"
+      details: "na"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/samourai/settings-rbf.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Settings for sending RBF enabled transactions. RBF disabled by default.
+    - image: /img/compatibility/samourai/send-screen-default.png
+      caption: >
+        Sending RBF Transaction - Default send transaction screen. No RBF options.
+    - image: /img/compatibility/samourai/send-stonewall-prompt.png
+      caption: >
+        Sending RBF Transaction - Prompt during send transaction for “STONEWALL” feature.
+    - image: /img/compatibility/samourai/transaction-list-sent.png
+      caption: >
+        Sending RBF Transaction - Sent RBF enabled transaction. No RBF flag.
+    - image: /img/compatibility/samourai/transaction-details-sent.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction details for RBF enabled transaction with Increase TX Fee option. Interesting note here - If there are no additional funds to pay for the bump, Samourai just fails silently here with no message and takes the user back to the transaction list screen.
+    - image: /img/compatibility/samourai/sent-transaction-increase-fee.png
+      caption: >
+        Sending RBF Transaction - Prompt when “increase tx fee” is chosen. Miner fee not customizable.
+    - image: /img/compatibility/samourai/transaction-list-sent-replaced.png
+      caption: >
+        Sending RBF Transaction - Send RBF bumped transaction replaces original RBF enabled transaction. No flag. Confirmation message does say “RBF transaction sent”
+    - image: /img/compatibility/samourai/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Transaction list screen for receiving RBF enabled transaction. No RBF flag.
+    - image: /img/compatibility/samourai/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Transaction details prompt for received transaction. “View transaction” defaults to Smartbit explorer (explorer configurable in settings).
+    - image: /img/compatibility/samourai/transaction-details-incoming-rbf-increase-fee.png
+      caption: >
+        Receiving RBF Transaction - Transaction details “Increase transaction fee” dialog.
+    - image: /img/compatibility/samourai/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list screen showing both original and bumped transactions. Total reflecting sum of both transactions. No RBF flag or warnings.
+    - image: /img/compatibility/samourai/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list screen updated to just show replacement transaction after a period of time. Even before either RBF transaction was confirmed.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,6 +24,27 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/ledger-live/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Send transaction screen does not allow for RBF. Fee options are available. No RBF options in settings.
+    - image: /img/compatibility/ledger-live/transaction-details-sent.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction details screen. No RBF fee bumping supported.
+    - image: /img/compatibility/ledger-live/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Transaction list screen. No RBF flag.
+    - image: /img/compatibility/ledger-live/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Transaction details screen. No RBF flag.
+    - image: /img/compatibility/ledger-live/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction list screen does not show the bumped transaction. Only the original. Even after the new, bumped transaction received 6+ confirmations.
+    - image: /img/compatibility/ledger-live/error-screen.png
+      caption: >
+        Receiving RBF Transaction - Internal database error shows conflicting bitcoin inputs. Original transaction remains unconfirmed. Ticket opened with Ledger to address. (Update - Solution was to clear cache in app)
+
+
+
+
+
+

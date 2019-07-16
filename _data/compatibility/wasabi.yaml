@@ -24,6 +24,17 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/wasabi/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Send transaction screen. No RBF options.
+    - image: /img/compatibility/wasabi/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction list screen showing sent transaction. No RBF bump options. Transaction not sent using RBF.
+    - image: /img/compatibility/wasabi/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming RBF transaction. No RBF flag.
+    - image: /img/compatibility/wasabi/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Replacement transaction replaces original transaction after transaction bump. No RBF indicator.
+
+

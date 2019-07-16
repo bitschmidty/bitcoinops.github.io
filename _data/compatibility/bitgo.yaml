@@ -24,6 +24,27 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/bitgo/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen with fee options expanded. No RBF options.
+    - image: /img/compatibility/bitgo/sent-confirmation.png
+      caption: >
+        Sending RBF Transaction - Send confirmation screen. Fee noted. No RBF note. Note Transaction was not sent with RBF flag enabled.
+    - image: /img/compatibility/bitgo/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction list screen showing sent transaction. No RBF options. Note BitGo uses the Smartbit explorer to show transaction details.
+    - image: /img/compatibility/bitgo/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Unconfirmed transactions do not appear in BitGo transactions list.
+    - image: /img/compatibility/bitgo/notification-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming transaction email. No RBF note.
+    - image: /img/compatibility/bitgo/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Since no unconfirmed transaction appear, neither original nor bumped show until the bumped confirms.
+
+
+
+
+
+

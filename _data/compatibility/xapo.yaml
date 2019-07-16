@@ -24,6 +24,43 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/xapo/send-screen.png
       caption: >
         Sending RBF Transaction - Default wallet send screen
+    - image: /img/compatibility/xapo/send-miner-fee-options.png
+      caption: >
+        Sending RBF Transaction - Send transaction, choose miner fees. No RBF options.
+    - image: /img/compatibility/xapo/tranasction-details-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction not sent with RBF signal. No bumping possible.
+    - image: /img/compatibility/xapo/notification-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Email notification. No RBF warning.
+    - image: /img/compatibility/xapo/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming RBF transaction in list. No label for RBF.
+    - image: /img/compatibility/xapo/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - Incoming RBF transaction details. No RBF flag.
+    - image: /img/compatibility/xapo/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Incoming bumped transaction. Both transactions show. Balance credited twice.
+    - image: /img/compatibility/xapo/dashboard-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Dashboard shows 2 incoming transaction. Balance includes both transactions.
+    - image: /img/compatibility/xapo/notification-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Additional email notification for bumped transaction.
+    - image: /img/compatibility/xapo/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Even after bumped transaction has 100 confirms, original transaction stays pending.
+
+
+
+
+
+
+
+
+
+

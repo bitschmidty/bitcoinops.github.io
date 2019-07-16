@@ -24,6 +24,21 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/mycelium/send-screen-default.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send transaction screen. No options for RBF while sending or in app settings.
+    - image: /img/compatibility/mycelium/send-miner-fee-options.png
+      caption: >
+        Sending RBF Transaction - Send transaction miner fee details. No RBF options.
+    - image: /img/compatibility/mycelium/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction list. No option to bump since transaction sent without RBF.
+    - image: /img/compatibility/mycelium/transaction-details-sent.png
+      caption: >
+        Bumping RBF Transaction - Sent transaction details. No sign RBF/not or bumping.
+    - image: /img/compatibility/mycelium/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - SReceiving RBF, or any transaction. No unconfirmed transactions of any kind show.
+
+
+

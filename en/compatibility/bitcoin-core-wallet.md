@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Bitcoin Core Wallet
+title: 
+
 permalink: /en/compatibility/bitcoin-core/
 ---
 {% assign tool = site.data.compatibility.bitcoin-core-wallet %}

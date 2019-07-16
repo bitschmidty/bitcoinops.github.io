@@ -1,7 +1,7 @@
 ---
-name: Binance
-internal_url: /en/compatibility/binance
-logo: /img/logos/third-party/binance.png
+name: Bitstamp
+internal_url: /en/compatibility/bitstamp
+logo: /img/logos/third-party/bitstamp.png
 description: >
   TODO
 rbf:
@@ -24,6 +24,19 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/bitstamp/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Send transaction screen. No fee or RBF options.Transaction not sent via RBF
+    - image: /img/compatibility/bitstamp/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transaction - Transaction list screen with sent transaction. No bumping option since transaction was not RBF.
+    - image: /img/compatibility/bitstamp/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - No transaction listed when original transaction broadcast.
+    - image: /img/compatibility/bitstamp/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Only saw transaction after bumped confirmed. Didn’t see original.
+
+
+
+

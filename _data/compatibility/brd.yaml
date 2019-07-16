@@ -24,6 +24,39 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/brd/send-screen-default.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Transaction send default screen. No options for RBF here or in settings menus.
+    - image: /img/compatibility/brd/send-fee-options-expanded.png
+      caption: >
+        Sending RBF Transaction - Transaction send screen with fee options expanded. No options for RBF. Toggle for fee priority.
+    - image: /img/compatibility/brd/send-transaction-confirmation.png
+      caption: >
+        Sending RBF Transaction - Transaction send confirmation prompt.
+    - image: /img/compatibility/brd/transaction-details-sent.png
+      caption: >
+        Bumping RBF Enabled Transaction - No ability to bump transaction fee found. Note Transaction not sent with RBF enabled.
+    - image: /img/compatibility/brd/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - No RBF flag on transaction list screen.
+    - image: /img/compatibility/brd/transaction-details-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - No RBF flag on transaction details screen.
+    - image: /img/compatibility/brd/transaction-list-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - On transaction list screen, original transaction shows normal, bumped transaction shows with “Failed” message.
+    - image: /img/compatibility/brd/transaction-list-incoming-replacement-confirmed.png
+      caption: >
+        Receiving RBF Transaction - Transaction list screen no longer shows original transaction after the bumped transaction confirms.
+    - image: /img/compatibility/brd/transaction-details-incoming-replacement.png
+      caption: >
+        Receiving RBF Transaction - Transaction details of the bumped, confirmed, transaction. No RBF flag or reference to original transaction.
+
+
+
+
+
+
+
+
+

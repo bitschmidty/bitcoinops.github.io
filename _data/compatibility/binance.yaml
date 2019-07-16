@@ -24,6 +24,17 @@ rbf:
       shows_replaced_version: "na"
       shows_original_version: "na"
   examples:
-    - image: /img/compatibility/bitcoin-core/default-wallet-send-screen.png
+    - image: /img/compatibility/binance/send-screen.png
       caption: >
-        Sending RBF Transaction - Default wallet send screen
+        Sending RBF Transaction - Default send (withdrawal) screen. No RBF options.
+    - image: /img/compatibility/binance/transaction-list-sent.png
+      caption: >
+        Bumping RBF Transactiont - Transaction not sent via RBF. No fee bump options.
+    - image: /img/compatibility/binance/transaction-list-incoming-rbf.png
+      caption: >
+        Receiving RBF Transaction - No unconfirmed transactions appear in transaction list.
+    - image: /img/compatibility/binance/transaction-list-replacement-confirmed.png
+      caption: >
+        Receiving Bumped RBF Transaction - Replacement transaction only shows up after confirmed. Neither transaction shows before.
+
+
