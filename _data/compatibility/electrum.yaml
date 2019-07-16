@@ -1,0 +1,69 @@
+---
+name: Electrum
+internal_url: /en/compatibility/electrum
+logo: /img/logos/third-party/electrum.png
+description: >
+  [Electrum](https://electrum.org/) is an open source wallet for
+  Windows, Mac, Linux, and Android.
+rbf:
+  tested:
+    date: "2018-08-28"
+    platforms:
+      - macos
+    version: "3.2.2"
+  features:
+    receive:
+      notification: "false"
+      list: "true"
+      details: "false"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
+    send:
+      signals_bip125: "true"
+      list: "true"
+      details: "false"
+      shows_replaced_version: "true"
+      shows_original_version: "false"
+  examples:
+    - image: /img/compatibility/electrum/default-wallet-send-screen.png
+      caption: >
+        Sending RBF Transaction - Default Wallet Send Screen
+    - image: /img/compatibility/electrum/preference-rbf-checkbox.png
+      caption: >
+        Sending RBF Transaction - Preferences Pane with RBF checkbox
+    - image: /img/compatibility/electrum/transaction-list-outgoing-rbf-transaction.png
+      caption: >
+        Sending RBF Transaction - Transaction list screen for outgoing RBF transaction. RBF noted
+    - image: /img/compatibility/electrum/transaction-details-outgoing-rbf-transaction.png
+      caption: >
+        Sending RBF Transaction - Transaction details screen for outgoing RBF transaction. No note of RBF transaction.
+    - image: /img/compatibility/electrum/transaction-list-context-menu-increase-fee.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction List context menu for “Increase fee”
+    - image: /img/compatibility/electrum/dialog-bumped-fee-input.png
+      caption: >
+        Bumping RBF Enabled Transaction - Dialog for inputting bumped fee
+    - image: /img/compatibility/electrum/transaction-list-replacement-tx-only.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction list shows only one unconfirmed transaction, the latest, bumped. RBF noted.
+    - image: /img/compatibility/electrum/transaction-details-replacement-tx.png
+      caption: >
+        Bumping RBF Enabled Transaction - Transaction details of bumped transaction. No RBF noted. No note of original transaction.
+    - image: /img/compatibility/electrum/incoming-transaction-alert.png
+      caption: >
+        Receiving RBF Transaction - Notification of incoming transaction. No specific note that the transaction is RBF signalled
+    - image: /img/compatibility/electrum/transaction-list-rbf-noted.png
+      caption: >
+        Receiving RBF Transaction - Transaction List Screen. Notes rbf transaction as well as fee size
+    - image: /img/compatibility/electrum/transaction-details-incoming.png
+      caption: >
+        Receiving RBF Transaction - Transaction Details screen for an RBF transaction. No RBF note.
+    - image: /img/compatibility/electrum/alert-incoming-replacement-tx.png
+      caption: >
+        Receiving Bumped RBF Transaction - New transaction notification for the RBF bumped transaction
+    - image: /img/compatibility/electrum/transaction-list-replacement-tx.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction List Screen. Notes rbf transaction as well as fee size. The bumped transaction does not show up as a separate. The original transaction disappears.
+    - image: /img/compatibility/electrum/transaction-details-incoming-replacement.png
+      caption: >
+        Receiving Bumped RBF Transaction - Transaction details of incoming bumped RBF transaction. RBF not noted.
