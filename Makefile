@@ -9,6 +9,8 @@ build:
 	bundle exec jekyll build --future --drafts --unpublished
 
 test:
+	## Check compatibility schema against tool data
+	$S ! find _data/compatibility -type f -exec bundle exec _contrib/schema-validator.rb _qa/compatibility.yaml {} \; | grep .
 	## Check for Markdown formatting problems
 	@ ## - MD009: trailing spaces (can lead to extraneous <br> tags
 	bundle exec mdl -g -r MD009 .
