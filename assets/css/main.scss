@@ -141,3 +141,10 @@ div.xoverflow {
   font-size: 80%;
   code { font-size: 80%; }
 }
+
+.feature-good strong {
+  border-bottom: 2px solid palegreen;
+}
+.feature-bad strong {
+  border-bottom: 2px solid pink;
+}
