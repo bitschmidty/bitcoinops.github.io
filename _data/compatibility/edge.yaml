@@ -2,8 +2,6 @@
 name: Edge
 internal_url: /en/compatibility/edge
 logo: /img/logos/third-party/edge.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-17"
@@ -48,7 +46,3 @@ rbf:
     - image: /img/compatibility/edge/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction list with top 2 transactions being the original and bumped RBF transaction. No RBF flag. Note that the balance only went up by the value of one of the transactions.
-
-
-
-

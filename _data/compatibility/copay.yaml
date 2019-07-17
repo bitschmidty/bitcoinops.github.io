@@ -2,8 +2,6 @@
 name: Copay
 internal_url: /en/compatibility/copay
 logo: /img/logos/third-party/copay.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-02"
@@ -51,11 +49,3 @@ rbf:
     - image: /img/compatibility/copay/transaction-details-incoming-rbf.png
       caption: >
         Receiving RBF Transaction - Transaction details do not show that the transaction was RBF enabled.
-
-
-
-
-
-
-
-

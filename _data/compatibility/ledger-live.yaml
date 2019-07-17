@@ -2,8 +2,6 @@
 name: Ledger Live
 internal_url: /en/compatibility/ledger-live
 logo: /img/logos/third-party/ledger-live.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-11"
@@ -42,9 +40,3 @@ rbf:
     - image: /img/compatibility/ledger-live/error-screen.png
       caption: >
         Receiving RBF Transaction - Internal database error shows conflicting bitcoin inputs. Original transaction remains unconfirmed. Ticket opened with Ledger to address. (Update - Solution was to clear cache in app)
-
-
-
-
-
-

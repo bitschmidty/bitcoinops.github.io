@@ -2,8 +2,6 @@
 name: Binance
 internal_url: /en/compatibility/binance
 logo: /img/logos/third-party/binance.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-06"
@@ -36,5 +34,3 @@ rbf:
     - image: /img/compatibility/binance/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Replacement transaction only shows up after confirmed. Neither transaction shows before.
-
-

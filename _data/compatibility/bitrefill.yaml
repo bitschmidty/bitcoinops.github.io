@@ -2,8 +2,6 @@
 name: Bitrefill
 internal_url: /en/compatibility/bitrefill
 logo: /img/logos/third-party/bitrefill.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-06"
@@ -39,8 +37,3 @@ rbf:
     - image: /img/compatibility/bitrefill/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - At some point in the next day, the original transaction was marked failed and replacement transaction was credited to account and marked complete.
-
-
-
-
-

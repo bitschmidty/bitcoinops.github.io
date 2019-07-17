@@ -2,8 +2,6 @@
 name: blockchain.info
 internal_url: /en/compatibility/blockchaininfo
 logo: /img/logos/third-party/blockchaininfo.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2019-07-05"
@@ -37,6 +35,3 @@ rbf:
     - image: /img/compatibility/blockchaininfo/transaction-list-incoming-rbf.png
       caption: >
         Receiving RBF Transaction - Receiving RBF transaction. RBF flag is shown.
-
-
-

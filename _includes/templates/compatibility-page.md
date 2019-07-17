@@ -61,7 +61,7 @@ block chain space used, this is the most efficient form of fee bumping.
     Does not visually indicate that a received transaction has signaled RBF when viewing the transaction details
   {% when "na" %}{:.feature-neutral}
   - **Does not show transaction details**<br>
-    This service does not show transaction details natively. Usually this means the service links off to a block explorer for transaction details.
+    This service does not show transaction details natively. Usually this means the service links to a block explorer for transaction details.
   {% when "untested" %}{:.feature-neutral}
   - **Not tested**<br>
     We either didn’t test this or could not appropriately determine the results
@@ -148,7 +148,7 @@ block chain space used, this is the most efficient form of fee bumping.
     Does not visually indicate that a sent transaction has signaled RBF when viewing the transaction details
   {% when "na" %}{:.feature-neutral}
   - **Does not show transaction details**<br>
-    This service does not show transaction details natively. Usually this means the service links off to a block explorer for transaction details.
+    This service does not show transaction details natively. Usually this means the service links to a block explorer for transaction details.
   {% when "untested" %}{:.feature-neutral}
   - **Not tested**<br>
     We either didn’t test this or could not appropriately determine the results
@@ -202,7 +202,7 @@ block chain space used, this is the most efficient form of fee bumping.
   {% endif %}
 {% endcapture %}
 <div markdown="1" class="compat-usability">
-[![{{example.caption|escape_once}}]({{example.image}}){:width="250px"}]({{link}})
+[![{{example.caption|escape_once}}]({{example.image}})]({{link}})
 <br /><span class="compat-caption">{{example.caption}}</span>
 </div>
 {% assign break = forloop.index | modulo:2 %}

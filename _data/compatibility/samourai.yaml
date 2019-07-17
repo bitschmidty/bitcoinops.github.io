@@ -2,8 +2,6 @@
 name: Samourai
 internal_url: /en/compatibility/samourai
 logo: /img/logos/third-party/samourai.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-25"
@@ -60,21 +58,3 @@ rbf:
     - image: /img/compatibility/samourai/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction list screen updated to just show replacement transaction after a period of time. Even before either RBF transaction was confirmed.
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

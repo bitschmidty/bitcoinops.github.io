@@ -2,8 +2,6 @@
 name: BRD
 internal_url: /en/compatibility/brd
 logo: /img/logos/third-party/brd.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-10"
@@ -51,12 +49,3 @@ rbf:
     - image: /img/compatibility/brd/transaction-details-incoming-replacement.png
       caption: >
         Receiving RBF Transaction - Transaction details of the bumped, confirmed, transaction. No RBF flag or reference to original transaction.
-
-
-
-
-
-
-
-
-

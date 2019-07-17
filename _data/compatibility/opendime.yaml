@@ -2,8 +2,6 @@
 name: Opendime
 internal_url: /en/compatibility/opendime
 logo: /img/logos/third-party/opendime.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-18"
@@ -36,5 +34,3 @@ rbf:
     - image: /img/compatibility/opendime/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction list screen when a transaction has been bumped. Bottom transaction is the bumped fee transaction. Original transaction does not show up in list anymore.
-
-

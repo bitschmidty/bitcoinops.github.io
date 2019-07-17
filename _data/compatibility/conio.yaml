@@ -2,8 +2,6 @@
 name: Conio
 internal_url: /en/compatibility/conio
 logo: /img/logos/third-party/conio.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-10-31"
@@ -60,13 +58,3 @@ rbf:
     - image: /img/compatibility/conio/transaction-details-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Additional transaction details available once transaction was confirmed.
-
-
-
- 
-
- 
-
- 
-
-

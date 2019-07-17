@@ -6,7 +6,6 @@ required:
   - name
   - internal_url
   - logo
-  - description
 additionalProperties: false
 properties:
   name:
@@ -22,10 +21,6 @@ properties:
     description: The path to the wallet's logo on our site
     type: string
     pattern: &img "^/img/logos/third-party/.*(png|svg)$"
-
-  description:
-    description: A short description of the wallet.  No superlatives
-    type: string
 
   rbf:
     description: Container for information about Replace-by-Fee (especially BIP125)
@@ -126,48 +121,3 @@ properties:
             caption:
               description: Caption to give the image
               type: string
-
-  segwit:
-    description: Container for information about segwit support
-    type: object
-    additionalProperties: false
-    properties:
-      tested: *tested
-      examples: *examples
-      features:
-        description: Segwit receiving features
-        type: object
-        properties:
-          receive:
-            description: Features related to generating segwit receive addresses
-            type: object
-            properties:
-              p2sh_wrapped: 
-                description: Does the wallet allow receiving to P2SH-wrapped segwit?
-                type: string
-                enum: *feat
-              bech32: 
-                description: Does the wallet allow receiving to Bech32 native segwit addresses?
-                type: string
-                enum: *feat
-              default: 
-                description: What is the default address receive type?
-                type: string
-                enum:
-                  - "p2sh_wrapped"
-                  - "v0"
-            additionalProperties: false
-
-          send:
-            description: Features related to sending to segwit addresses
-            type: object
-            properties:
-              bech32:
-                description: Does the wallet allow sending to Bech32 native segwit addresses?
-                type: string
-                enum: *feat
-              change_bech32:
-                description: Does the wallet return change to itself in a Bech32 native segwit address?
-                type: string
-                enum: *feat
-            additionalProperties: false

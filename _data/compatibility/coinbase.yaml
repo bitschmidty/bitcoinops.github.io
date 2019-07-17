@@ -2,8 +2,6 @@
 name: Coinbase
 internal_url: /en/compatibility/coinbase
 logo: /img/logos/third-party/coinbase.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-05"
@@ -45,10 +43,3 @@ rbf:
     - image: /img/compatibility/coinbase/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - After bumped transaction confirmed, the bumped transaction then shows up and is credited. Original transactions stays as pending. (even after 100 confirmations)
-
-
-
-
-
-
-

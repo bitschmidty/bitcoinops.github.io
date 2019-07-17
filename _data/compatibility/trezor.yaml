@@ -2,8 +2,6 @@
 name: Trezor
 internal_url: /en/compatibility/trezor
 logo: /img/logos/third-party/trezor.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-08"
@@ -39,8 +37,3 @@ rbf:
     - image: /img/compatibility/trezor/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Bumped transaction replaces original transaction. Block explorer no longer finds original transaction either.
-
-
-
-
-

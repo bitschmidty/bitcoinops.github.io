@@ -2,8 +2,6 @@
 name: Abra
 internal_url: /en/compatibility/abra
 logo: /img/logos/third-party/abra.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-12-06"
@@ -51,12 +49,3 @@ rbf:
     - image: /img/compatibility/abra/transaction-details-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Bumped transaction details.
-
-
-
-
-
-
-
-
-

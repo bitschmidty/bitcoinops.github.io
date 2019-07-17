@@ -2,8 +2,6 @@
 name: Xapo
 internal_url: /en/compatibility/xapo
 logo: /img/logos/third-party/xapo.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-05"
@@ -54,13 +52,3 @@ rbf:
     - image: /img/compatibility/xapo/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Even after bumped transaction has 100 confirms, original transaction stays pending.
-
-
-
-
-
-
-
-
-
-

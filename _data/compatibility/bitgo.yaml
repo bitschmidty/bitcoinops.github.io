@@ -2,8 +2,6 @@
 name: BitGo
 internal_url: /en/compatibility/bitgo
 logo: /img/logos/third-party/bitgo.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-12-06"
@@ -42,9 +40,3 @@ rbf:
     - image: /img/compatibility/bitgo/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Since no unconfirmed transaction appear, neither original nor bumped show until the bumped confirms.
-
-
-
-
-
-

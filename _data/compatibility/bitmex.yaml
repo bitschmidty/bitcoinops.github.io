@@ -2,8 +2,6 @@
 name: BitMEX
 internal_url: /en/compatibility/bitmex
 logo: /img/logos/third-party/bitmex.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-05"
@@ -27,4 +25,3 @@ rbf:
     - image: /img/compatibility/bitmex/send-screen.png
       caption: >
         Sending RBF Transaction - Send Transaction screen. Transactions sent out of BitMEX are not RBF signaled. BitMEX only accepts confirmed transactions.
-

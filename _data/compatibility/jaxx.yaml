@@ -2,8 +2,6 @@
 name: Jaxx
 internal_url: /en/compatibility/jaxx
 logo: /img/logos/third-party/jaxx.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-11-07"

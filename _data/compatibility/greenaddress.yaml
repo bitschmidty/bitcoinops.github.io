@@ -2,8 +2,6 @@
 name: GreenAddress
 internal_url: /en/compatibility/greenaddress
 logo: /img/logos/third-party/greenaddress.png
-description: >
-  TODO
 rbf:
   tested:
     date: "2018-09-25"
@@ -96,25 +94,3 @@ rbf:
     - image: /img/compatibility/greenaddress/transaction-details-bumped-confirmed-tx.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction details for confirmed, bumped transaction. No note of double spend or RBF. “double spend by txhash” field disappears.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
