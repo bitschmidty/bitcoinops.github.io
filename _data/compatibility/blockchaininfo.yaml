@@ -33,6 +33,34 @@ rbf:
     - image: /img/compatibility/blockchaininfo/transaction-list-incoming-rbf.png
       caption: >
         Receiving RBF Transaction - Receiving RBF transaction. No RBF flag.
+segwit:
+  tested:
+    date: "2019-06-27"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "false"
+      default: "p2pkh"
+    send:
+      bech32: "true" 
+      change_bech32: "false"
+      segwit_v1: "Error occurs during sending process, after validation."
+      bech32_p2wsh: "true"
+  examples:
+    - image: /img/compatibility/blockchaininfo/segwit/receive-screen.png
+      caption: >
+        Blockchain only generates P2PKH addresses for receiving.
+    - image: /img/compatibility/blockchaininfo/segwit/send-screen.png
+      caption: >
+        Blockchain can send to bech32 addresses.
+    - image: /img/compatibility/blockchaininfo/segwit/send-v1-error.png
+      caption: >
+        Blockchain initially allows to send to segwit v1 addresses but an error
+        occurs after completing the send process.
+
 
 
 

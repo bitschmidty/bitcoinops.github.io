@@ -47,20 +47,24 @@ segwit:
     version: "n/a"
   features:
     receive:
-      p2sh_wrapped: "?"
+      p2sh_wrapped: "true"
       bech32: "false"
-      default: "?"
+      default: "p2sh_wrapped"
     send:
       bech32: "true" 
       change_bech32: "true"
+      segwit_v1: "Address does not pass validation."
+      bech32_p2wsh: "true"
   examples:
     - image: /img/compatibility/bitrefill/segwit/receive-screen.png
       caption: >
-        Bitrefill allows P2SH deposits. No bech32 option available.
+        Bitrefill allows P2SH-wrapped segwit deposits. No bech32 option available.
     - image: /img/compatibility/bitrefill/segwit/send-screen.png
       caption: >
-        Bitrefill can send to bech32 native addresses. Change address format
-
+        Bitrefill can send to bech32 native addresses. Change address is also bech32.
+    - image: /img/compatibility/bitrefill/segwit/send-v1.png
+      caption: >
+        Bitrefill displays an address validation error for segwit v1 addresses.
 
 
 

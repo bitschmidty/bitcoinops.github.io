@@ -51,7 +51,26 @@ rbf:
     - image: /img/compatibility/brd/transaction-details-incoming-replacement.png
       caption: >
         Receiving RBF Transaction - Transaction details of the bumped, confirmed, transaction. No RBF flag or reference to original transaction.
-
+segwit:
+  tested:
+    date: "2019-06-27"
+    platforms:
+      - ios
+    version: "3.13"
+  features:
+    receive:
+      p2sh_wrapped: ""
+      bech32: ""
+      default: ""
+    send:
+      bech32: "" 
+      change_bech32: ""
+      segwit_v1: ""
+      bech32_p2wsh: ""
+  examples:
+    - image: /img/compatibility/brd/segwit/receive-screen.png
+      caption: >
+        Blockchain only generates P2PKH addresses for receiving.
 
 
 

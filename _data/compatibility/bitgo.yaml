@@ -56,6 +56,8 @@ segwit:
     send:
       bech32: "true" 
       change_bech32: "false"
+      segwit_v1: "Error occurs during sending process, after validation."
+      bech32_p2wsh: "true"
   examples:
     - image: /img/compatibility/bitgo/segwit/receive-screen.png
       caption: >
@@ -67,7 +69,9 @@ segwit:
       caption: >
         BitGo's web wallet allows sending to bech32 addresses. Change addresses
         are not bech32 native, but P2SH-wrapped segwit addresses.
-
+    - image: /img/compatibility/bitgo/segwit/send-v1.png
+      caption: >
+        BitGo's web wallet displays an error when attempting send to segwit v1 addresses.
 
 
 

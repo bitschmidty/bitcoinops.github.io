@@ -68,7 +68,7 @@ segwit:
       caption: >
         Coinbase allows sending to either wrapped or native segwit addresses.
         There is also visual validation of the address format.
-    - image: /img/compatibility/coinbase/segwit/transaction-details.png
+    - image: /img/compatibility/coinbase/segwit/transaction-details-sent.png
       caption: >
         Transaction details screen shows the bech32 address. However, the link
         for that address uses a block explorer (blockcypher) which shows an

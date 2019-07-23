@@ -36,7 +36,29 @@ rbf:
     - image: /img/compatibility/bitstamp/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Only saw transaction after bumped confirmed. Didn’t see original.
-
-
+segwit:
+  tested:
+    date: "2019-06-27"
+    platforms:
+      - web
+    version: "n/a"
+  features:
+    receive:
+      p2sh_wrapped: "true"
+      bech32: "false"
+      default: "p2sh_wrapped_p2wsh"
+    send:
+      bech32: "false" 
+      change_bech32: "untested"
+      segwit_v1: "false"
+      bech32_p2wsh: "false"
+  examples:
+    - image: /img/compatibility/bitstamp/segwit/receive-screen.png
+      caption: >
+        Bitstamp receives deposits to P2SH-P2WSH addresses.
+    - image: /img/compatibility/bitstamp/segwit/send-screen.png
+      caption: >
+        Bitstamp limits the characters available for an address so that bech32
+        addresses are impossible to enter in the textbox.
 
 
