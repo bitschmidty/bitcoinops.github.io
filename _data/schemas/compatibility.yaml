@@ -153,17 +153,13 @@ properties:
               default: 
                 description: What is the default address receive type?
                 type: string
-<<<<<<< HEAD
                 enum:
-                  - "p2sh_wrapped"
-                  - "v0"
-=======
-                enum: 
                   - "p2pkh"
                   - "p2sh"
-                  - "p2sh-wrapped"
+                  - "p2sh_wrapped"
+                  - "p2sh_wrapped_p2wsh"
                   - "bech32"
->>>>>>> binance coinbase bitgo bitmex electrum abra segwit tests
+                  - "bech32_p2wsh"
             additionalProperties: false
           send:
             description: Features related to sending to segwit addresses
@@ -175,6 +171,13 @@ properties:
                 enum: *feat
               change_bech32:
                 description: Does the wallet return change to itself in a Bech32 native segwit address?
+                type: string
+                enum: *feat
+              segwit_v1:
+                description: Does the wallet allow sending to segwit v1 witnesses?
+                type: string (Does not pass validation, Bech32 not supported, Error during sending)
+              bech32_p2wsh:
+                description: Does the wallet allow sending to Bech32 native segwit p2wsh addresses?
                 type: string
                 enum: *feat
             additionalProperties: false
