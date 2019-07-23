@@ -208,13 +208,15 @@ block chain space used, this is the most efficient form of fee bumping.
 {% endfor %}
 
 
-## SegWit Addresses
+## Segwit Addresses
 
-An unconfirmed transaction can be replaced by another version of the
-same transaction that spends the same inputs.  Most full nodes support
-this if the earlier transaction enables [BIP125](https://github.com/bitcoin/bips/blob/master/bip-0125.mediawiki) signaling and the
-replacement transaction increases the amount of fee paid.  In terms of
-block chain space used, this is the most efficient form of fee bumping.
+Transactions that spend bitcoins secured by segregated witness (segwit) use less
+space in a block than equivalent non-segwit (legacy) transactions, allowing
+segwit transactions to pay less total fee to achieve the same feerate as legacy transactions.
+
+{% assign tested = tool.segwit.tested. %}
+*Tested: {{tested.platforms}} {% if tested.version
+!= "n/a" %} version {{tested.version}} {% endif %} on {{tested.date}}*
 
 ### Send support
 
@@ -231,7 +233,10 @@ block chain space used, this is the most efficient form of fee bumping.
     {% assign link = example.image %}
   {% endif %}
 {% endcapture %}
-<div markdown="1" style="max-width: 300px; float: left; padding: 20px;">
+<div markdown="1" class="compat-usability">
 [![{{example.caption|escape_once}}]({{example.image}}){:width="250px"}]({{link}})
-<br />{{example.caption}}</div>
+<br /><span class="compat-caption">{{example.caption}}</span>
+</div>
+{% assign break = forloop.index | modulo:2 %}
+{% if break == 0 %}<br clear="both" />{% endif %}
 {% endfor %}
