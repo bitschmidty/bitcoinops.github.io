@@ -96,9 +96,32 @@ rbf:
     - image: /img/compatibility/greenaddress/transaction-details-bumped-confirmed-tx.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction details for confirmed, bumped transaction. No note of double spend or RBF. “double spend by txhash” field disappears.
-
-
-
+segwit:
+  tested:
+    date: "2019-07-24"
+    platforms:
+      - ios
+    version: "3.1.8"
+  features:
+    receive:
+      p2sh_wrapped: "true"
+      bech32: "false"
+      default: "p2sh_wrapped"
+    send:
+      bech32: "true"
+      change_bech32: "false"
+      segwit_v1: "Fails on validation of the address."
+      bech32_p2wsh: "true"
+  examples:
+    - image: /img/compatibility/greenaddress/segwit/receive-screen.png
+      caption: >
+        Green generates only P2SH wrapped segwit addresses.
+    - image: /img/compatibility/greenaddress/segwit/send-screen.png
+      caption: >
+        Green can send to all variants of bech32 addresses for v0.
+    - image: /img/compatibility/greenaddress/segwit/send-screen-segwit-v1-error.png
+      caption: >
+        Green displays a validation error when trying to send to a segwit v1 address.
 
 
 
