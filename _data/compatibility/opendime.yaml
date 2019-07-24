@@ -36,5 +36,26 @@ rbf:
     - image: /img/compatibility/opendime/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction list screen when a transaction has been bumped. Bottom transaction is the bumped fee transaction. Original transaction does not show up in list anymore.
-
+segwit:
+  tested:
+    date: "2019-07-24"
+    platforms:
+      - macos
+    version: "2.2.0"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "false"
+      default: "p2pkh"
+    send:
+      bech32: "na"
+      change_bech32: "na"
+      segwit_v1: "Sending transactions via Opendime software is not supported.
+      Private keys are used by user-selected wallet software to create transactions."
+      bech32_p2wsh: "na"
+  examples:
+    - image: /img/compatibility/opendime/segwit/receive-screen.png
+      caption: >
+        Opendime has a single P2PKH receive address. It is not capable of
+        sending transactions.
 
