@@ -59,11 +59,13 @@ segwit:
     send:
       bech32: "true" 
       change_bech32: "true"
+      segwit_v1: "Fails address validation client side in the UI."
+      bech32_p2wsh: "true"
   examples:
     - image: /img/compatibility/coinbase/segwit/receive-screen.png
       caption: >
         Coinbase does not have an explicit option for receiving to bech32.
-        Coinbase using p2sh wrapped segwit addresses for receiving.
+        Coinbase uses p2sh wrapped segwit addresses for receiving.
     - image: /img/compatibility/coinbase/segwit/send-screen.png
       caption: >
         Coinbase allows sending to either wrapped or native segwit addresses.
@@ -77,7 +79,11 @@ segwit:
       caption: >
         Coinbase uses bech32 for their change addresses, even when the send is
         going to non bech32.
-
+    - image: /img/compatibility/coinbase/segwit/send-segwit-v1.png
+      caption: >
+        Coinbase allows for sending to bech32 including P2WPKH and P2WSH for
+        segwit v0. Coinbase detects segwit v1 addresses and displays a
+        validation error.
 
 
 

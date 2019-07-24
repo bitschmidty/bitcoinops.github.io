@@ -48,7 +48,38 @@ rbf:
     - image: /img/compatibility/edge/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction list with top 2 transactions being the original and bumped RBF transaction. No RBF flag. Note that the balance only went up by the value of one of the transactions.
-
-
-
-
+segwit:
+  tested:
+    date: "2019-07-23"
+    platforms:
+      - ios
+    version: "1.8.3"
+  features:
+    receive:
+      p2sh_wrapped: "true"
+      bech32: "false"
+      default: "p2sh_wrapped"
+    send:
+      bech32: "true"
+      change_bech32: "false"
+      segwit_v1: "Allows sending workflow to complete. Transaction stays in
+      pending state. Appears to causes issues with the balance calculation as
+      well as ability to send subsequent transactions."
+      bech32_p2wsh: "true"
+  examples:
+    - image: /img/compatibility/edge/segwit/receive-screen.png
+      caption: >
+        Edge generates only 
+    - image: /img/compatibility/edge/segwit/send-screen.png
+      caption: >
+        Edge allows sends to both segwit v0 and v1 native bech32 addresses. 
+    - image: /img/compatibility/edge/segwit/transaction-list-segwit-v1-pending.png
+      caption: >
+        Balance is calculated incorrectly after segwit v1 transaction is "sent".
+        Subsequent transactions out of the wallet do not seem to be broadcast.
+        Issue reported via GitHub.
+    - image: /img/compatibility/edge/segwit/wallet-creation-screen.png
+      caption: >
+        Edge allows the creation of "Segwit" and "no Segwit" wallets. The
+        "Segwit" wallets use P2SH-wrapped P2WPKH addresses. Both wallet types
+        can send to segwit v0 addresses.

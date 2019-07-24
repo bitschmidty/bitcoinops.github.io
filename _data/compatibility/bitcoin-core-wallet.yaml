@@ -92,8 +92,8 @@ segwit:
       bech32: "true" 
       change_bech32: "true"
       segwit_v1: "Transaction can be created and broadcast, but does not make it
-      to the mempool"
-      bech32_p2wsh: TODO
+      to the mempool."
+      bech32_p2wsh: "true"
   examples:
     - image: /img/compatibility/bitcoin-core/segwit/receive-screen.png
       caption: >

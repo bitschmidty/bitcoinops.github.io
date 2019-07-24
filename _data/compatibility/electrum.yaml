@@ -82,6 +82,8 @@ segwit:
     send:
       bech32: "true" 
       change_bech32: "true"
+      segwit_v1: "Error message during broadcasting of transaction."
+      bech32_p2wsh: "true"
   examples:
     - image: /img/compatibility/electrum/segwit/create-wallet.png
       caption: >
@@ -104,3 +106,6 @@ segwit:
     - image: /img/compatibility/electrum/segwit/send-screen.png
       caption: >
         Sending to bech32 addresses is possible from all Electrum wallet types.
+    - image: /img/compatibility/electrum/segwit/send-segwit-v1-error.png
+      caption: >
+        Sending to segwit v1 addresses fails during broadcast of transaction.
