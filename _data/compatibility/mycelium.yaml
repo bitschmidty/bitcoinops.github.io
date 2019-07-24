@@ -39,6 +39,32 @@ rbf:
     - image: /img/compatibility/mycelium/transaction-list-incoming-rbf.png
       caption: >
         Receiving RBF Transaction - SReceiving RBF, or any transaction. No unconfirmed transactions of any kind show.
-
+segwit:
+  tested:
+    date: "2019-07-24"
+    platforms:
+      - ios
+    version: "14"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "false"
+      default: "p2pkh"
+    send:
+      bech32: "false"
+      change_bech32: "false"
+      segwit_v1: "Fails during address validation."
+      bech32_p2wsh: "false"
+  examples:
+    - image: /img/compatibility/mycelium/segwit/receive-screen.png
+      caption: >
+        Mycelium only generates P2PKH receive addresses.
+    - image: /img/compatibility/mycelium/segwit/send-screen.png
+      caption: >
+        Mycelium cannot send to any bech32 addresses.
+    - image: /img/compatibility/mycelium/segwit/send-screen-segwit-v1-error.png
+      caption: >
+        Jaxx displays a validation error when trying to send to a segwit v1
+        address (or any other bech32 address).
 
 
