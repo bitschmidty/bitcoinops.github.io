@@ -60,9 +60,43 @@ rbf:
     - image: /img/compatibility/samourai/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Transaction list screen updated to just show replacement transaction after a period of time. Even before either RBF transaction was confirmed.
-
- 
-
+segwit:
+  tested:
+    date: "2019-07-25"
+    platforms:
+      - android
+    version: "0.99.82"
+  features:
+    receive:
+      p2sh_wrapped: "true"
+      bech32: "true"
+      default: "bech32"
+    send:
+      bech32: "true"
+      change_bech32: "true"
+      segwit_v1: "Fails on broadcast of transaction to the network."
+      bech32_p2wsh: "true"
+  examples:
+    - image: /img/compatibility/samourai/segwit/receive-screen.png
+      caption: >
+        By default, Samourai generates bech32 receive addresses.
+    - image: /img/compatibility/samourai/segwit/send-screen.png
+      caption: >
+        Samourai can send to all segwit v0 addresses.
+    - image: /img/compatibility/samourai/segwit/receive-screen-advanced.png
+      caption: >
+        Samourai allows the user to choose the type of their receive address.
+    - image: /img/compatibility/samourai/segwit/send-screen-segwit-v1-error.png
+      caption: >
+        Samourai wallet shows an error during broadcasting when trying to send
+        to a segwit v1 address.
+    - image: /img/compatibility/samourai/segwit/settings-transactions.png
+      caption: >
+        Samourai has setting options for 1. receive to segwit address and 2.
+        receive change to like-typed outputs. Both of which are on by default.
+    - image: /img/compatibility/samourai/segwit/settings-wallet.png
+      caption: >
+        Samourai has options to view the wallet's X/Y/ZPUBs.
 
 
 
