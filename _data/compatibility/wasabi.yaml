@@ -36,5 +36,31 @@ rbf:
     - image: /img/compatibility/wasabi/transaction-list-incoming-replacement.png
       caption: >
         Receiving Bumped RBF Transaction - Replacement transaction replaces original transaction after transaction bump. No RBF indicator.
-
+segwit:
+  tested:
+    date: "2019-07-26"
+    platforms:
+      - macos
+    version: "1.1.6"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "true"
+      default: "bech32"
+    send:
+      bech32: "true"
+      change_bech32: "true"
+      segwit_v1: "Fails on validation of the address."
+      bech32_p2wsh: "true"
+  examples:
+    - image: /img/compatibility/wasabi/segwit/receive-screen.png
+      caption: >
+        Wasabi only generates bech32 receive addresses.
+    - image: /img/compatibility/wasabi/segwit/send-screen.png
+      caption: >
+        Wasabi allows sending to any segwit v0 address.
+    - image: /img/compatibility/wasabi/segwit/send-screen-segwit-v1-error.png
+      caption: >
+        Wasabi displays a validation error when attempting to send to a segwit
+        v1 address.
 
