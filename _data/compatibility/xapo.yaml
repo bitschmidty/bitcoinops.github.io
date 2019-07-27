@@ -54,7 +54,34 @@ rbf:
     - image: /img/compatibility/xapo/transaction-list-replacement-confirmed.png
       caption: >
         Receiving Bumped RBF Transaction - Even after bumped transaction has 100 confirms, original transaction stays pending.
-
+segwit:
+  tested:
+    date: "2019-07-27"
+    platforms:
+      - ios
+    version: "5.0.3"
+  features:
+    receive:
+      p2sh_wrapped: "false"
+      bech32: "false"
+      default: "p2sh_wrapped_p2wsh"
+    send:
+      bech32: "true"
+      change_bech32: "false"
+      segwit_v1: "Xapo allows users to create segwit v1 transactions in the UI. However,
+        the transaction gets stuck as pending for an indeterminate period of time."
+      bech32_p2wsh: "true"
+  examples:
+    - image: /img/compatibility/xapo/segwit/receive-screen.png
+      caption: >
+        Xapo only generates P2SH wrapped P2WSH receive addresses.
+    - image: /img/compatibility/xapo/segwit/send-screen.png
+      caption: >
+        Xappo allows sending to any segwit v0 address.
+    - image: /img/compatibility/xapo/segwit/send-screen-segwit-v1-pending.png
+      caption: >
+        Xapo allows users to create segwit v1 transactions in the UI. However,
+        the transaction gets stuck as pending.
 
 
 
