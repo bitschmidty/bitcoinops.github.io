@@ -1,7 +1,7 @@
 ---
 name: BitGo
 internal_url: /en/compatibility/bitgo
-logo: /img/logos/third-party/bitgo.png
+logo: /img/compatibility/bitgo/bitgo.png
 rbf:
   tested:
     date: "2018-12-06"

@@ -1,12 +1,12 @@
 ---
 name: Abra
 internal_url: /en/compatibility/abra
-logo: /img/logos/third-party/abra.png
+logo: /img/compatibility/abra/abra.png
 rbf:
   tested:
     date: "2018-12-06"
     platforms:
-      - ios
+      - iOS
     version: "5.4.0"
   features:
     receive:

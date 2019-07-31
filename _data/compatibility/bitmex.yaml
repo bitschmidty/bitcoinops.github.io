@@ -1,7 +1,7 @@
 ---
 name: BitMEX
 internal_url: /en/compatibility/bitmex
-logo: /img/logos/third-party/bitmex.png
+logo: /img/compatibility/bitmex/bitmex.png
 rbf:
   tested:
     date: "2018-11-05"

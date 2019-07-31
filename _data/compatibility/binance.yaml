@@ -1,7 +1,7 @@
 ---
 name: Binance
 internal_url: /en/compatibility/binance
-logo: /img/logos/third-party/binance.png
+logo: /img/compatibility/binance/binance.png
 rbf:
   tested:
     date: "2018-11-06"
