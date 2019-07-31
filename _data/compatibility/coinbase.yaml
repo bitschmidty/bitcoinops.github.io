@@ -1,7 +1,7 @@
 ---
 name: Coinbase
 internal_url: /en/compatibility/coinbase
-logo: /img/logos/third-party/coinbase.png
+logo: /img/compatibility/coinbase/coinbase.png
 rbf:
   tested:
     date: "2018-11-05"

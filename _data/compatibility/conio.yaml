@@ -1,12 +1,12 @@
 ---
 name: Conio
 internal_url: /en/compatibility/conio
-logo: /img/logos/third-party/conio.png
+logo: /img/compatibility/conio/conio.png
 rbf:
   tested:
     date: "2018-10-31"
     platforms:
-      - ios
+      - iOS
     version: "2.5.6"
   features:
     receive:

@@ -1,12 +1,12 @@
 ---
 name: Copay
 internal_url: /en/compatibility/copay
-logo: /img/logos/third-party/copay.png
+logo: /img/compatibility/copay/copay.png
 rbf:
   tested:
     date: "2018-10-02"
     platforms:
-      - macos
+      - macOS
     version: "4.7.0"
   features:
     receive:
