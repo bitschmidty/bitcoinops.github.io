@@ -214,13 +214,137 @@ Transactions that spend bitcoins secured by segregated witness (segwit) use less
 space in a block than equivalent non-segwit (legacy) transactions, allowing
 segwit transactions to pay less total fee to achieve the same feerate as legacy transactions.
 
+{% if tool.segwit %}
+
 {% assign tested = tool.segwit.tested. %}
 *Tested: {{tested.platforms}} {% if tested.version
 != "n/a" %} version {{tested.version}} {% endif %} on {{tested.date}}*
 
+### Receive support
+
+{% assign segwit = tool.segwit.features. %}
+{:id="segwit-receive-p2sh_wrapped"}
+{% case segwit.receive.p2sh_wrapped %}
+  {% when "true" %}{:.feature-good}
+  - **Allows receiving to P2SH-wrapped segwit**<br>
+    Allows the generation of P2SH-wrapped (either P2WPKH or P2WSH) segwit receiving addresses.
+  {% when "false" %}{:.feature-bad}
+  - **Does not allow receiving to P2SH-wrapped segwit**<br>
+    Does not allow the generation of P2SH-wrapped (either P2WPKH or P2WSH) segwit receiving addresses.
+  {% when "na" %}{:.feature-neutral}
+  - **No receiving capabilities**<br>
+    There are no receiving capabilities for this service.
+  {% when "untested" %}{:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
+{% endcase %}
+
+{:id="segwit-receive-bech32"}
+{% case segwit.receive.bech32 %}
+  {% when "true" %}{:.feature-good}
+  - **Allows receiving to bech32 segwit addresses**<br>
+    Allows the generation of bech32 native (either P2WPKH or P2WSH) segwit receiving addresses.
+  {% when "false" %}{:.feature-bad}
+  - **Does not allow receiving to bech32 segwit addresses**<br>
+    Does not allow the generation of bech32 native (either P2WPKH or P2WSH) segwit receiving addresses.
+  {% when "na" %}{:.feature-neutral}
+  - **No receiving capabilities**<br>
+    There are no receiving capabilities for this service.
+  {% when "untested" %}{:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
+{% endcase %}
+
+{:id="segwit-receive-default"}
+{% case segwit.receive.default %}
+  {% when "p2pkh" %}{:.feature-bad}
+  - **Default receiving address is P2PKH**<br>
+    This service generates legacy P2PKH receiving addresses by default.
+  {% when "p2sh" %}{:.feature-bad}
+  - **Default receiving address is P2SH**<br>
+    This service generates P2SH (not P2SH-wrapped segwit) receiving addresses by
+    default.
+  {% when "p2sh_wrapped" %}{:.feature-good}
+  - **Default receiving address is P2SH-wrapped P2WPKH**<br>
+    This service generates P2SH-wrapped P2WPKH segwit receiving addresses by
+    default.
+  {% when "p2sh_wrapped_p2wsh" %}{:.feature-good}
+  - **Default receiving address is P2SH-wrapped P2WSH**<br>
+    This service generates P2SH-wrapped P2WSH segwit receiving addresses by default.
+  {% when "bech32" %}{:.feature-good}
+  - **Default receiving address is bech32 P2WPKH**<br>
+    This service generates bech32 P2WPKH segwit receiving addresses by default.
+  {% when "bech32_p2wsh" %}{:.feature-good}
+  - **Default receiving address is bech32 P2WSH**<br>
+    This service generates bech32 P2WSH segwit receiving addresses by default.
+  {% when "na" %}{:.feature-neutral}
+  - **No receiving capabilities**<br>
+    There are no receiving capabilities for this service.
+  {% when "untested" %}{:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
+{% endcase %}
+
 ### Send support
 
-### Receive support
+{:id="segwit-send-bech32"}
+{% case segwit.send.bech32 %}
+  {% when "true" %}{:.feature-good}
+  - **Allows sending to bech32 P2WPKH addresses**<br>
+    Allows sending to bech32 P2WPKH native segwit addresses.
+  {% when "false" %}{:.feature-bad}
+  - **Does not allow sending to bech32 P2WPKH addresses**<br>
+    Does not allow sending to bech32 P2WPKH native segwit addresses.
+  {% when "na" %}{:.feature-neutral}
+  - **No receiving capabilities**<br>
+    There are no sending capabilities for this service.
+  {% when "untested" %}{:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
+{% endcase %}
+
+{:id="segwit-send-bech32_p2wsh"}
+{% case segwit.send.bech32_p2wsh %}
+  {% when "true" %}{:.feature-good}
+  - **Allows sending to bech32 P2WSH addresses**<br>
+    Allows sending to bech32 P2WSH native segwit addresses.
+  {% when "false" %}{:.feature-bad}
+  - **Does not allow sending to bech32 P2WSH addresses**<br>
+    Does not allow sending to bech32 P2WSH native segwit addresses.
+  {% when "na" %}{:.feature-neutral}
+  - **No receiving capabilities**<br>
+    There are no sending capabilities for this service.
+  {% when "untested" %}{:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
+{% endcase %}
+
+{:id="segwit-send-change_bech32"}
+{% case segwit.send.change_bech32 %}
+  {% when "true" %}{:.feature-good}
+  - **Creates bech32 change addresses**<br>
+    When sending, generates bech32 (either P2WPKH or P2WSH) segwit change addresses.
+  {% when "false" %}{:.feature-bad}
+  - **Does not create bech32 change addresses**<br>
+    When sending, does not generate bech32 (either P2WPKH or P2WSH) segwit change addresses.
+  {% when "na" %}{:.feature-neutral}
+  - **No receiving capabilities**<br>
+    There are no sending capabilities for this service.
+  {% when "untested" %}{:.feature-neutral}
+  - **Not tested**<br>
+    We either didn’t test this or could not appropriately determine the results
+  {% else %}{% include ERROR_42_UNEXPECTED_VALUE %}
+{% endcase %}
+
+{:id="segwit-send-segwit_v1"}
+{:.feature-neutral}
+- **How is sending to segwit v1 addresses handled?**<br>
+{{ segwit.send.segwit_v1 }}
 
 ### Usability
 
@@ -240,3 +364,7 @@ segwit transactions to pay less total fee to achieve the same feerate as legacy 
 {% assign break = forloop.index | modulo:2 %}
 {% if break == 0 %}<br clear="both" />{% endif %}
 {% endfor %}
+
+{% else %}
+*We have not yet tested {{tool.name}} for segwit capabilities.*
+{% endif %}
