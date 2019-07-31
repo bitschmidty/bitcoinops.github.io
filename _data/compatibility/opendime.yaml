@@ -1,12 +1,12 @@
 ---
 name: Opendime
 internal_url: /en/compatibility/opendime
-logo: /img/logos/third-party/opendime.png
+logo: /img/compatibility/opendime/opendime.png
 rbf:
   tested:
     date: "2018-10-18"
     platforms:
-      - macos
+      - web
     version: "2.1.0"
   features:
     receive:

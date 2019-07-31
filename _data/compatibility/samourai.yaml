@@ -1,12 +1,12 @@
 ---
 name: Samourai
 internal_url: /en/compatibility/samourai
-logo: /img/logos/third-party/samourai.png
+logo: /img/compatibility/samourai/samourai.png
 rbf:
   tested:
     date: "2018-10-25"
     platforms:
-      - android
+      - Android
     version: "3.3.2"
   features:
     receive:

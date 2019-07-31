@@ -1,12 +1,12 @@
 ---
 name: Wasabi
 internal_url: /en/compatibility/wasabi
-logo: /img/logos/third-party/wasabi.png
+logo: /img/compatibility/wasabi/wasabi.png
 rbf:
   tested:
     date: "2018-11-08"
     platforms:
-      - macos
+      - macOS
     version: "1.0"
   features:
     receive:

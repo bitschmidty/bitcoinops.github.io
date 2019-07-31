@@ -1,12 +1,12 @@
 ---
 name: Mycelium
 internal_url: /en/compatibility/mycelium
-logo: /img/logos/third-party/mycelium.png
+logo: /img/compatibility/mycelium/mycelium.png
 rbf:
   tested:
     date: "2018-10-30"
     platforms:
-      - ios
+      - iOS
     version: "1.11"
   features:
     receive:

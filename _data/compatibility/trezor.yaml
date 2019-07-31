@@ -1,7 +1,7 @@
 ---
 name: Trezor
 internal_url: /en/compatibility/trezor
-logo: /img/logos/third-party/trezor.png
+logo: /img/compatibility/trezor/trezor.png
 rbf:
   tested:
     date: "2018-11-08"
