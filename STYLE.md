@@ -13,11 +13,12 @@ The first letter of a proper noun is always capitalized.
 The first letter of a common noun is only capitalized at the start of a
 sentence or heading.
 
+- bech32
 - bitcoin (the currency)
-- schnorr
-- taproot
 - merkle (tree|root|branch|node)
+- schnorr
 - segwit
+- taproot
 
 ### Forbidden abbreviations
 
@@ -30,15 +31,25 @@ by its full name (e.g. Foo Bar Baz (FBB)) with the exception of the
 following abbreviations we assume readers will already know.
 
 - BIP (Bitcoin Improvement Proposal)
+  - BIPXXX referencing a specific BIP number
 - BTC (Bitcoin)
+- DoS (Denial-of-service)
 - ECDSA (Elliptic Curve Digital Signature Algorithm)
 - kB, MB, GB, TB, etc... (SI-prefixed byte sizes)
 - kiB, MiB, GiB, TiB, etc... (SI-prefixed binary byte sizes)
 - LN (Lightning Network)
+- mempool (memory pool)
 - P2P (Peer-to-Peer)
+- P2PKH (Pay to Public Key Hash)
+- P2SH (Pay to Script Hash)
+- P2SH-wrapped segwit (Pay to Script Hash wrapped segwit)
+- P2WPKH (Pay to Witness Public Key Hash)
+- P2WSH (Pay to Witness Script Hash)
 - pubkey (public key)
 - RFC (Request For Comments, the IETF documents)
 - segwit (segregated witness)
+- txid (transaction identifier)
+- UTXO (Unspent Transaction Output)
 - vbyte (virtual byte)
 
 ### Compound words
@@ -46,8 +57,12 @@ following abbreviations we assume readers will already know.
 | Use | Don't use |
 |-|-|
 | block chain | blockchain |
+| mainnet | main net |
+| multisig | multi-sig |
 | offchain | off-chain |
 | onchain | on-chain |
+| redeemScript | redeem script |
+| 2-of-3 | 2 of 3 |
 
 ### Spelling
 

@@ -129,5 +129,23 @@ on bech32 sending support, from March 19th to August 28th, 2019.
 
 {% include specials/bech32/17-signmessage.md %}
 
+## Survey of support issues
+
+*Originally published in [Newsletter #55][].*
+
+{% include specials/bech32/18-support-issues.md %}
+
+## Fee savings in dollar terms
+
+*Originally published in [Newsletter #56][].*
+
+{% include specials/bech32/19-real-fees.md %}
+
+## Bech32 adoption rate
+
+*Originally published in [Newsletter #57][].*
+
+{% include specials/bech32/20-percentage-loss.md %}
+
 ## Footnotes
 {:.no_toc}

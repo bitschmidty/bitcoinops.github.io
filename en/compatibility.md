@@ -5,7 +5,7 @@ permalink: /en/compatibility/
 nowrap: true
 ---
 {% assign yes = '<span class="feature-yes"><strong>✓</strong></span>' %}
-{% assign no = '<span class="feature-bad"><strong>✕</strong></span>' %}
+{% assign no = '<span class="feature-no"><strong>✕</strong></span>' %}
 <style>
 th, td { text-align: center; }
 h1, h2, h3, h4, h5, h6 { text-align: center; }

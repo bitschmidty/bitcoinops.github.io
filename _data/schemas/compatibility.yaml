@@ -20,7 +20,7 @@ properties:
   logo:
     description: The path to the wallet's logo on our site
     type: string
-    pattern: &img "^/img/logos/third-party/.*(png|svg)$"
+    pattern: &img "^/img/compatibility/.*/.*(png|svg)$"
 
   rbf:
     description: Container for information about Replace-by-Fee (especially BIP125)
@@ -43,11 +43,11 @@ properties:
             items:
               type: string
               enum:
-                - linux
-                - macos
-                - windows
-                - android
-                - ios
+                - Android
+                - Linux
+                - Windows
+                - iOS
+                - macOS
                 - web
           version:
             description: the version tested
@@ -61,7 +61,7 @@ properties:
             type: object
             properties:
               notification:
-                description: If there is a notification for incoming transactions, does that notification flag RBF?
+                description: If there is a notification for incoming transactions, does that notification flag whether the transaction signals RBF?
                 type: string
                 enum: &feat
                   - "true"
@@ -69,11 +69,11 @@ properties:
                   - na
                   - untested
               list: &rbf_list
-                description: Is an incoming transaction flagged as RBF in the list of wallet transactions?
+                description: Is an incoming transaction flagged as signaling RBF in the list of wallet transactions?
                 type: string
                 enum: *feat
               details: &rbf_details
-                description: Is an incoming transaction flagged as RBF in the transaction details?
+                description: Is an incoming transaction flagged as signaling RBF in the transaction details?
                 type: string
                 enum: *feat
               shows_replaced_version: &rbf_shows_replaced
