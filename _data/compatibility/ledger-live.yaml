@@ -1,12 +1,12 @@
 ---
 name: Ledger Live
 internal_url: /en/compatibility/ledger-live
-logo: /img/logos/third-party/ledger-live.png
+logo: /img/compatibility/ledger-live/ledger-live.png
 rbf:
   tested:
     date: "2018-10-11"
     platforms:
-      - macos
+      - macOS
     version: "1.2.0"
   features:
     receive:

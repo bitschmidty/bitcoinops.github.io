@@ -1,12 +1,12 @@
 ---
 name: Electrum
 internal_url: /en/compatibility/electrum
-logo: /img/logos/third-party/electrum.png
+logo: /img/compatibility/electrum/electrum.png
 rbf:
   tested:
     date: "2018-08-28"
     platforms:
-      - macos
+      - macOS
     version: "3.2.2"
   features:
     receive:

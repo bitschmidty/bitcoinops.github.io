@@ -1,12 +1,12 @@
 ---
 name: GreenAddress
 internal_url: /en/compatibility/greenaddress
-logo: /img/logos/third-party/greenaddress.png
+logo: /img/compatibility/greenaddress/greenaddress.png
 rbf:
   tested:
     date: "2018-09-25"
     platforms:
-      - ios
+      - iOS
     version: "0.0.52"
   features:
     receive:
