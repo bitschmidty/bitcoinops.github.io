@@ -1,7 +1,7 @@
 ---
 name: Bitrefill
 internal_url: /en/compatibility/bitrefill
-logo: /img/logos/third-party/bitrefill.png
+logo: /img/compatibility/bitrefill/bitrefill.png
 rbf:
   tested:
     date: "2018-11-06"

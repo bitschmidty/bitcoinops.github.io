@@ -1,12 +1,12 @@
 ---
 name: BRD
 internal_url: /en/compatibility/brd
-logo: /img/logos/third-party/brd.png
+logo: /img/compatibility/brd/brd.png
 rbf:
   tested:
     date: "2018-10-10"
     platforms:
-      - ios
+      - iOS
     version: "3.3.2"
   features:
     receive:

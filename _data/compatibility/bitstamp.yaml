@@ -1,7 +1,7 @@
 ---
 name: Bitstamp
 internal_url: /en/compatibility/bitstamp
-logo: /img/logos/third-party/bitstamp.png
+logo: /img/compatibility/bitstamp/bitstamp.png
 rbf:
   tested:
     date: "2018-11-06"

@@ -1,7 +1,7 @@
 ---
 name: blockchain.info
 internal_url: /en/compatibility/blockchaininfo
-logo: /img/logos/third-party/blockchaininfo.png
+logo: /img/compatibility/blockchaininfo/blockchaininfo.png
 rbf:
   tested:
     date: "2019-07-05"
