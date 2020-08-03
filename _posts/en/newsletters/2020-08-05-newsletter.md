@@ -37,15 +37,15 @@ highlight a selection of the transcripts from the previous month.*
   [slides][rb slides])
 
 - **Chicago meetup discussion:** Anonymized participants discussed
-  various Lightning Network attacks including Flood & Loot, fee
-  blackmail, transaction pinning, preimage denial (see [Newsletter
+  various Lightning Network attacks including flood and loot, fee
+  blackmail, [transaction pinning][topic transaction pinning], preimage denial (see [Newsletter
   #95][news95 LN payment atomicity]) and time dilation (see [Newsletter
   #101][news101 LN time dilation]). In light of these various attacks of
   varying severities it was debated what current users should do to
   protect themselves on the Lightning Network and longer term what
-  sufficient mitigations would be. Some solutions such as package relay,
-  anchor outputs and rearchitecting the Bitcoin Core mempool are being
-  worked on but more work is required at both the onchain layer and the
+  sufficient mitigations would be. Some solutions such as [package relay][topic package relay],
+  [anchor outputs][topic anchor outputs] and rearchitecting the Bitcoin Core mempool are being
+  worked on---but more work will be required at both the onchain layer and the
   Lightning layer in the coming months and years.
   ([transcript][chicago transcript])
 
@@ -61,7 +61,7 @@ highlight a selection of the transcripts from the previous month.*
 - **Sydney meetup discussion:** Anonymized participants discussed
   resolved bugs in the Bitcoin Core build system over the past months
   and the future challenges of building and distributing Bitcoin Core
-  binaries on Mac OS in light of notarization requirements and Apple
+  binaries on MacOS in light of notarization requirements and Apple
   transitioning from Intel to ARM processors. Other topics included
   updates to the [SIGHASH_ANYPREVOUT][topic sighash_noinput]
   proposal, generalized Bitcoin-compatible channels, and the latest thinking
@@ -70,16 +70,16 @@ highlight a selection of the transcripts from the previous month.*
 - **BIP-Taproot:** Pieter Wuille and Russell O’Connor participated in a
   joint event organized by London BitDevs and Bitcoin Munich exploring
   the history of how the original idea of [MAST][topic MAST] evolved
-  into the final [Taproot][topic Taproot] proposal. Wuille talked about
+  into the final [taproot][topic Taproot] proposal. Wuille talked about
   how his personal motivation switched from seeking to enable cross
   input signature aggregation to bolstering the privacy and efficiency
   of more complex transactions. O’Connor also gave an update on
-  development of the Simplicity (see [Newsletter #96][news96
-  simplicity]) language. He speculated how Simplicity could be
+  development of the Simplicity language (see [Newsletter #96][news96
+  simplicity]). He speculated how Simplicity could be
   implemented as a Tapleaf version in the coming years and used for
-  delegation, covenants and other functionality not facilitated by
-  Bitcoin Script. The Schnorr [PR][libsecp256k1 #558] in libsecp256k1 and
-  the Taproot [PR][Bitcoin Core #17977] in Bitcoin Core are seeking
+  delegation, [covenants][topic covenants], and other functionality not currently available using
+  Bitcoin Script. The [PR][libsecp256k1 #558] for [schnorr signatures][topic schnorr signatures] in libsecp256k1 and
+  the taproot [PR][Bitcoin Core #17977] in Bitcoin Core are seeking
   further review and O’Connor encouraged the community to consider what
   taproot might break in their own software well in advance of any
   possible deployment.  ([transcript][london/munich transcript], [video][london/munich video])
@@ -216,7 +216,7 @@ FIXME:harding to update Tuesday
 [sapio slides]: https://docs.google.com/presentation/d/1X4AGNXJ5yCeHRrf5sa9DarWfDyEkm6fFUlrcIRQtUw4/
 [timelock issue]: https://medium.com/blockstream/patching-the-liquid-timelock-issue-b4b2f5f9a973
 [sydney transcript]: https://diyhpl.us/wiki/transcripts/sydney-bitcoin-meetup/2020-07-21-socratic-seminar/
-[london transcript]: https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-07-21-socratic-seminar-bip-taproot/
-[london video]: https://www.youtube.com/watch?v=bPcguc108QM
+[london/munich transcript]: https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-07-21-socratic-seminar-bip-taproot/
+[london/munich video]: https://www.youtube.com/watch?v=bPcguc108QM
 [news96 simplicity]: /en/newsletters/2020/05/06/#simplicity-next-generation-smart-contracting
 [potzblitz]: https://www.youtube.com/channel/UCqUfpNS9-dzAvobqhviX39w
