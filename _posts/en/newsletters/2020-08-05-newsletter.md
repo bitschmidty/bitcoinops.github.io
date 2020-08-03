@@ -59,7 +59,32 @@ FIXME:harding to update Tuesday
 [Hardware Wallet Interface (HWI)][hwi], [Bitcoin Improvement Proposals
 (BIPs)][bips repo], and [Lightning BOLTs][bolts repo].*
 
-- [Bitcoin Core #19569][] Enable fetching of orphan parents from wtxid peers FIXME:moneyball
+- [Bitcoin Core #19569][] allows Bitcoin Core to fetch the parents of _orphan_
+  transactions from peers that relay transactions using wtxid. An orphan
+  transaction is an unconfirmed transaction that we receive from a peer where we
+  don't yet have the parent transactions, either as part of our best block
+  chain, or in the mempool. More precisely, an orphan transaction has at least
+  one transaction input whose associated output is not in the UTXO set or our
+  mempool's outpoint map.
+
+    When we receive an orphan transaction, we place it in a temporary data
+    structure called the orphan set. We then ask the peer that sent us the
+    orphan to also send us the parent transactions that we don't yet have. We can
+    do that because the orphan refers to the txids of the parent transactions. We
+    simply send a `GETDATA` message containing those txids to the peer to
+    request the parent transactions.
+
+    For [wtxid relay peers][news108 wtxid relay], transactions are announced
+    and requested using the _wtxid_ of the transaction, not the _txid_. However,
+    orphan transactions only refer to their parents' txids, not wtxids, so it's
+    not possible to request the parent transaction using wtxid. [PR
+    #18044][Bitcoin Core #18044], which introduced wtxid relay peers and was
+    merged last week, did not permit fetching parent transactions from wtxid
+    peers. This follow-up PR allows us to fetch those parents using the txid.
+
+    Fetching parent transactions using txid may eventually be replaced
+    by a [package relay][topic package relay] mechanism, where we can
+    ask a peer for all the unconfirmed ancestors of a transaction directly.
 
 - [Eclair #1491][] adds partial support for creating, using, and closing
   channels that use [anchor outputs][topic anchor outputs] to both reduce
@@ -116,10 +141,11 @@ FIXME:harding to update Tuesday
     to operate as a trusted signer for a signet.
 
 {% include references.md %}
-{% include linkers/issues.md issues="19569,1491,4488,948,947,785" %}
+{% include linkers/issues.md issues="19569,1491,4488,948,947,785,18044" %}
 [C-Lightning 0.9.0]: https://github.com/ElementsProject/lightning/releases/tag/v0.9.0rc3
 [Bitcoin Core 0.20.1]: https://bitcoincore.org/bin/bitcoin-core-0.20.1/
 [LND 0.11.0-beta]: https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta.rc1
 [fee overpayment attack]: /en/newsletters/2020/06/10/#fee-overpayment-attack-on-multi-input-segwit-transactions
 [news107 notable]: /en/newsletters/2020/07/22/#notable-code-and-documentation-changes
 [anchor spec discuss]: https://github.com/lightningnetwork/lightning-rfc/pull/688#issuecomment-661669232
+[news108 wtxid relay]: /en/newsletters/2020/07/29/#bitcoin-core-18044
