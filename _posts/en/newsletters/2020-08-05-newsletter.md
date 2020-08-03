@@ -126,13 +126,13 @@ FIXME:harding to update Tuesday
     When we receive an orphan transaction, we place it in a temporary data
     structure called the orphan set. We then ask the peer that sent us the
     orphan to also send us the parent transactions that we don't yet have. We can
-    do that because the orphan refers to the txids of the parent transactions. We
-    simply send a `GETDATA` message containing those txids to the peer to
-    request the parent transactions.
+    do that because the orphan transaction contains the txids of its parent
+    transactions. We simply send a `getdata` message containing those txids to
+    the peer to request the parent transactions.
 
     For [wtxid relay peers][news108 wtxid relay], transactions are announced
     and requested using the _wtxid_ of the transaction, not the _txid_. However,
-    orphan transactions only refer to their parents' txids, not wtxids, so it's
+    orphan transactions contain their parents' txids, not wtxids, so it's
     not possible to request the parent transaction using wtxid. [PR
     #18044][Bitcoin Core #18044], which introduced wtxid relay peers and was
     merged last week, did not permit fetching parent transactions from wtxid
