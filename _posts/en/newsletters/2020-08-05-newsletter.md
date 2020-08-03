@@ -26,25 +26,63 @@ week.*
 Bitcoin presentations and discussions. In this monthly feature, we
 highlight a selection of the transcripts from the previous month.*
 
-**RaspiBlitz full node**
+- **RaspiBlitz full node:** Rootzoll and Openoms appeared on
+  [Potzblitz][] to present the RaspiBlitz, a Bitcoin and Lightning
+  Network full node built on a Raspberry Pi (but also compatible with
+  other hardware). Openoms explored some of the apps and services you
+  can install on your RaspiBlitz such as ThunderHub and Balance of
+  Satoshis. Rootzoll explained how the IP2TOR subscription service
+  addresses the challenge of connecting a mobile wallet to a RaspiBlitz
+  full node running on a home network.  ([transcript][rb transcript], [video][rb video],
+  [slides][rb slides])
 
-Rootzoll and Openoms appeared on [Potzblitz][] to present the RaspiBlitz, a Bitcoin and Lightning Network full node built on a Raspberry Pi (but also compatible with other hardware). Openoms explored some of the apps and services you can install on your RaspiBlitz such as ThunderHub and Balance of Satoshis. Rootzoll explained how the IP2TOR subscription service addresses the challenge of connecting a mobile wallet to a RaspiBlitz full node running on a home network.  ([transcript](https://diyhpl.us/wiki/transcripts/lightning-hack-day/2020-06-21-rootzoll-openoms-raspiblitz/), [video](https://www.youtube.com/watch?v=1EqUi4xRbr0), [slides](https://keybase.pub/oms/Potzblitz9-RaspiBlitz-slides.pdf))
+- **Chicago meetup discussion:** Anonymized participants discussed
+  various Lightning Network attacks including Flood & Loot, fee
+  blackmail, transaction pinning, preimage denial (see [Newsletter
+  #95][news95 LN payment atomicity]) and time dilation (see [Newsletter
+  #101][news101 LN time dilation]). In light of these various attacks of
+  varying severities it was debated what current users should do to
+  protect themselves on the Lightning Network and longer term what
+  sufficient mitigations would be. Some solutions such as package relay,
+  anchor outputs and rearchitecting the Bitcoin Core mempool are being
+  worked on but more work is required at both the onchain layer and the
+  Lightning layer in the coming months and years.
+  ([transcript][chicago transcript])
 
-**Chicago meetup discussion**
+- **Sapio:** Jeremy Rubin presented Sapio at Reckless VR in virtual
+  reality. Sapio is a new high level programming language designed for
+  building stateful smart contracts with [OP_CHECKTEMPLATEVERIFY][topic
+  OP_CHECKTEMPLATEVERIFY]. Rubin used the case study of the recent
+  timelock [issue][timelock issue] with Blockstream’s Liquid sidechain to explain how
+  Sapio and OP_CHECKTEMPLATEVERIFY could theoretically have been
+  utilized to prevent funds unintentionally moving to the 2-of-3
+  multisig emergency backup.  ([transcript][sapio transcript], [video][sapio video], [slides][sapio slides])
 
-Anonymized participants discussed various Lightning Network attacks including Flood & Loot, fee blackmail, transaction pinning, preimage denial (see [Newsletter #95][news95 LN payment atomicity]) and time dilation (see [Newsletter #101][news101 LN time dilation]). In light of these various attacks of varying severities it was debated what current users should do to protect themselves on the Lightning Network and longer term what sufficient mitigations would be. Some solutions such as package relay, anchor outputs and rearchitecting the Bitcoin Core mempool are being worked on but more work is required at both the onchain layer and the Lightning layer in the coming months and years.  ([transcript](https://diyhpl.us/wiki/transcripts/chicago-bitdevs/2020-07-08-socratic-seminar/))
+- **Sydney meetup discussion:** Anonymized participants discussed
+  resolved bugs in the Bitcoin Core build system over the past months
+  and the future challenges of building and distributing Bitcoin Core
+  binaries on Mac OS in light of notarization requirements and Apple
+  transitioning from Intel to ARM processors. Other topics included
+  updates to the [SIGHASH_ANYPREVOUT][topic sighash_noinput]
+  proposal, generalized Bitcoin-compatible channels, and the latest thinking
+  on Taproot activation.  ([transcript][sydney transcript])
 
-**Sapio**
-
-Jeremy Rubin presented Sapio at Reckless VR in virtual reality. Sapio is a new high level programming language designed for building stateful smart contracts with [OP_CHECKTEMPLATEVERIFY][topic OP_CHECKTEMPLATEVERIFY]. Rubin used the case study of the recent timelock [issue](https://medium.com/blockstream/patching-the-liquid-timelock-issue-b4b2f5f9a973) with Blockstream’s Liquid sidechain to explain how Sapio and OP_CHECKTEMPLATEVERIFY could theoretically have been utilized to prevent funds unintentionally moving to the 2-of-3 multisig emergency backup.  ([transcript](https://diyhpl.us/wiki/transcripts/vr-bitcoin/2020-07-11-jeremy-rubin-sapio-101/), [video](https://www.youtube.com/watch?v=4vDuttlImPc), [slides](https://docs.google.com/presentation/d/1X4AGNXJ5yCeHRrf5sa9DarWfDyEkm6fFUlrcIRQtUw4/))
-
-**Sydney meetup discussion**
-
-Anonymized participants discussed resolved bugs in the Bitcoin Core build system over the past months and the future challenges of building and distributing Bitcoin Core binaries on Mac OS in light of notarization requirements and Apple transitioning from Intel to ARM processors. Other topics included updates to the [SIGHASH_ANYPREVOUT][topic sighash_anyprevout] proposal, generalized Bitcoin-compatible channels and latest thinking on Taproot activation.  ([transcript](https://diyhpl.us/wiki/transcripts/sydney-bitcoin-meetup/2020-07-21-socratic-seminar/))
-
-**BIP-Taproot**
-
-Pieter Wuille and Russell O’Connor participated in a joint event organized by London BitDevs and Bitcoin Munich exploring the history of how the original idea of [MAST][topic MAST] evolved into the final [Taproot][topic Taproot] proposal. Wuille talked about how his personal motivation switched from seeking to enable cross input signature aggregation to bolstering the privacy and efficiency of more complex transactions. O’Connor also gave an update on development of the Simplicity (see [Newsletter #96][news96 simplicity]) language. He speculated how Simplicity could be implemented as a Tapleaf version in the coming years and used for delegation, covenants and other functionality not facilitated by Bitcoin Script. The Schnorr [PR](https://github.com/bitcoin-core/secp256k1/pull/558) in libsecp256k1 and the Taproot [PR](https://github.com/bitcoin/bitcoin/pull/17977) in Bitcoin Core are seeking further review and O’Connor encouraged the community to consider what Taproot might break in their own software well in advance of any possible deployment.  ([transcript](https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-07-21-socratic-seminar-bip-taproot/), [video](https://www.youtube.com/watch?v=bPcguc108QM))
+- **BIP-Taproot:** Pieter Wuille and Russell O’Connor participated in a
+  joint event organized by London BitDevs and Bitcoin Munich exploring
+  the history of how the original idea of [MAST][topic MAST] evolved
+  into the final [Taproot][topic Taproot] proposal. Wuille talked about
+  how his personal motivation switched from seeking to enable cross
+  input signature aggregation to bolstering the privacy and efficiency
+  of more complex transactions. O’Connor also gave an update on
+  development of the Simplicity (see [Newsletter #96][news96
+  simplicity]) language. He speculated how Simplicity could be
+  implemented as a Tapleaf version in the coming years and used for
+  delegation, covenants and other functionality not facilitated by
+  Bitcoin Script. The Schnorr [PR][libsecp256k1 #558] in libsecp256k1 and
+  the Taproot [PR][Bitcoin Core #17977] in Bitcoin Core are seeking
+  further review and O’Connor encouraged the community to consider what
+  taproot might break in their own software well in advance of any
+  possible deployment.  ([transcript][london/munich transcript], [video][london/munich video])
 
 ## Releases and release candidates
 
@@ -159,7 +197,7 @@ FIXME:harding to update Tuesday
     to operate as a trusted signer for a signet.
 
 {% include references.md %}
-{% include linkers/issues.md issues="19569,1491,4488,948,947,785,18044" %}
+{% include linkers/issues.md issues="19569,1491,4488,948,947,785,18044,558,17977" %}
 [C-Lightning 0.9.0]: https://github.com/ElementsProject/lightning/releases/tag/v0.9.0rc3
 [Bitcoin Core 0.20.1]: https://bitcoincore.org/bin/bitcoin-core-0.20.1/
 [LND 0.11.0-beta]: https://github.com/lightningnetwork/lnd/releases/tag/v0.11.0-beta.rc1
@@ -167,3 +205,18 @@ FIXME:harding to update Tuesday
 [news107 notable]: /en/newsletters/2020/07/22/#notable-code-and-documentation-changes
 [anchor spec discuss]: https://github.com/lightningnetwork/lightning-rfc/pull/688#issuecomment-661669232
 [news108 wtxid relay]: /en/newsletters/2020/07/29/#bitcoin-core-18044
+[rb transcript]: https://diyhpl.us/wiki/transcripts/lightning-hack-day/2020-06-21-rootzoll-openoms-raspiblitz/
+[rb video]: https://www.youtube.com/watch?v=1EqUi4xRbr0
+[rb slides]: https://keybase.pub/oms/Potzblitz9-RaspiBlitz-slides.pdf
+[chicago transcript]: https://diyhpl.us/wiki/transcripts/chicago-bitdevs/2020-07-08-socratic-seminar/
+[news95 ln payment atomicity]: /en/newsletters/2020/04/29/#new-attack-against-ln-payment-atomicity
+[news101 ln time dilation]: /en/newsletters/2020/06/10/#time-dilation-attacks-against-ln
+[sapio transcript]: https://diyhpl.us/wiki/transcripts/vr-bitcoin/2020-07-11-jeremy-rubin-sapio-101/
+[sapio video]: https://www.youtube.com/watch?v=4vDuttlImPc
+[sapio slides]: https://docs.google.com/presentation/d/1X4AGNXJ5yCeHRrf5sa9DarWfDyEkm6fFUlrcIRQtUw4/
+[timelock issue]: https://medium.com/blockstream/patching-the-liquid-timelock-issue-b4b2f5f9a973
+[sydney transcript]: https://diyhpl.us/wiki/transcripts/sydney-bitcoin-meetup/2020-07-21-socratic-seminar/
+[london transcript]: https://diyhpl.us/wiki/transcripts/london-bitcoin-devs/2020-07-21-socratic-seminar-bip-taproot/
+[london video]: https://www.youtube.com/watch?v=bPcguc108QM
+[news96 simplicity]: /en/newsletters/2020/05/06/#simplicity-next-generation-smart-contracting
+[potzblitz]: https://www.youtube.com/channel/UCqUfpNS9-dzAvobqhviX39w
