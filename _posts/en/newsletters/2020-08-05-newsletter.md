@@ -7,7 +7,9 @@ type: newsletter
 layout: newsletter
 lang: en
 ---
-This week's newsletter describes the new Minsc policy language and contains our regular sections with recently
+This week's newsletter describes the new Minsc policy language, includes a field
+report showing how 57k of bitcoin fees could have been saved using segwit
+and batching, and contains our regular sections with recently
 transcribed talks and conversations, releases and release candidates,
 and notable changes to popular Bitcoin infrastructure projects.
 
@@ -89,6 +91,10 @@ and notable changes to popular Bitcoin infrastructure projects.
     analyze and it's able to take advantage of miniscript to transform the
     policy into a moderately smaller script than the original
     hand-crafted script.
+
+## Field report: How segwit and batching could have saved half a billion dollars in fees
+
+{% include articles/veriphi-segwit-batching.md %}
 
 ## Recently transcribed talks and conversations
 
