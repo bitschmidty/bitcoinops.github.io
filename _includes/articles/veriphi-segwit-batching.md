@@ -66,7 +66,7 @@ Read [our full report here][veriphi segwit batching full report] to understand
 fee savings progression over time and blockspace savings.
 
 {% include references.md %}
-[Gustavo Flores Echaiz]: https://github.com/Gfloresechaiz
+[Gustavo Flores Echaiz]: https://twitter.com/GustavoJ_Flores
 [Veriphi]: https://veriphi.io/
 [veriphi segwit batching full report]: https://veriphi.io/segwitbatchingcasestudy.pdf
 [harding batching formula]: https://github.com/harding/ref-payment-batching
