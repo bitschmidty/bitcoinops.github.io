@@ -7,7 +7,7 @@ type: newsletter
 layout: newsletter
 lang: en
 ---
-This week's newsletter contains our regular sections with recently
+This week's newsletter describes the new Minsc policy language and contains our regular sections with recently
 transcribed talks and conversations, releases and release candidates,
 and notable changes to popular Bitcoin infrastructure projects.
 
@@ -23,8 +23,8 @@ and notable changes to popular Bitcoin infrastructure projects.
   order for a UTXO to be spent.  The new language is based on the
   [miniscript][topic miniscript] policy language but adds the ability to
   use variables and functions along with several other features.  Minsc
-  policies can be compiled to miniscript policies, which can be further transformed
-  into miniscript and regular Bitcoin Script.  Compatibility
+  policies can be compiled to miniscript policies, which can be themselves
+  be compiled into miniscript and used to produce regular Bitcoin Script.  Compatibility
   with miniscript means that policies developed using Minsc will be
   solvable using any miniscript-aware wallet in the future, allowing
   wallets to contribute signatures, preimages, or other data needed to
@@ -35,8 +35,8 @@ and notable changes to popular Bitcoin infrastructure projects.
   protocols, shared coin ownership, and other types of desirable
   collaborations.
 
-    Ivgi has also created an outstanding [website][min.sc] for the language
-    that includes a plethora of examples and a live compiler that allows
+    Ivgi has also created an outstanding [website][min.sc] for the language.
+    It includes both a plethora of examples and a live compiler that allows
     linking to its input so that developers can easily play with the
     language and share their Minsc policies with other developers.  We
     recommend anyone interested in developing spending policies visit the
@@ -45,7 +45,7 @@ and notable changes to popular Bitcoin infrastructure projects.
     ago, before miniscript or Minsc, LN developers hand crafted the
     following [HTLC script][] specified in BOLT3:
 
-    ```text
+    ```python
     # To remote node with revocation key
     OP_DUP OP_HASH160 <RIPEMD160(SHA256(revocationpubkey))> OP_EQUAL
     OP_IF
@@ -67,7 +67,7 @@ and notable changes to popular Bitcoin infrastructure projects.
     The same encumbrance can be [specified][htlc minsc] using the following Minsc
     policy (setting the `cltv_expiry` to 3 hours):
 
-    ```rust
+    ```js
     fn htlc_received($revocationpubkey, $local_htlcpubkey,
                      $remote_htlcpubkey, $payment_hash,
                      $cltv_expiry)
@@ -85,8 +85,8 @@ and notable changes to popular Bitcoin infrastructure projects.
     htlc_received(A, B, C, H, 3 hours)
     ```
 
-    The Minsc policy is not only much easier for most developers to
-    analyze but it can take advantage of miniscript to transform the
+    The Minsc policy is significantly easier for most developers to
+    analyze and it's able to take advantage of miniscript to transform the
     policy into a moderately smaller script than the original
     hand-crafted script.
 
