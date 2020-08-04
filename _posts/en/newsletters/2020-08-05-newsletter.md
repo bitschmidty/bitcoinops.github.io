@@ -164,7 +164,7 @@ FIXME:harding to update Tuesday
 
 - [C-Lightning 0.9.0][C-Lightning 0.9.0] is the newest major version of
   C-Lightning.  It adds support for the updated `pay` command and new
-  `keysend` RPC described in [Newsletter #107][news107 notable].  It
+  `keysend` RPC both described in [Newsletter #107][news107 notable].  It
   also includes several other notable changes and multiple bug fixes.
 
 - [Bitcoin Core 0.20.1][Bitcoin Core 0.20.1] is a new maintenance
@@ -226,9 +226,9 @@ FIXME:harding to update Tuesday
   default remains at 40 blocks.  When there are only this many blocks
   until an LN payment has to be settled, LND will unilaterally close the
   channel to ensure the latest state gets recorded onchain.  However,
-  the higher this value is, the more time a payment could become
+  the higher the expiry is, the more time a payment could become
   temporarily stuck in a channel (either by accident or deliberately).
-  This has led some LN implementations to use route finding algorithms
+  This has led some LN implementations to use route-finding algorithms
   that optimize for routes with low CLTV expiry deltas, which has in
   turn led some users to set their deltas to values that are especially
   unsafe.  This new minimum should help prevent inexperienced users from
@@ -239,7 +239,7 @@ FIXME:harding to update Tuesday
 - [BIPs #947][] updates the [BIP325][] specification of [signet][topic
   signet] to change the block signature verification method.  Signets
   are test networks where valid blocks are signed by trusted signers
-  rather than using proof-of-work, a change which eliminates some issues
+  rather than using proof of work, a change which eliminates some issues
   and makes certain types of testing easier.
 
     Previously, signet assumed the use of signatures compatible with
