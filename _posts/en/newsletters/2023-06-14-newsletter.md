@@ -43,9 +43,12 @@ This week's newsletter FIXME:harding
     broadcasting a version of the transaction with a large annex that
     delays its confirmation.  Because Bitcoin Core and other full nodes
     don't currently relay transactions that contain annexes, this is not
-    a problem at present.  Jager [suggested][jager annex3] that some
+    a problem at present.  Jager [replied][jager annex4] that he wants
+    to store signatures from ephemeral keys for a type of [vault][topic
+    vaults] that doesn't require a soft fork, and he  [suggested][jager
+    annex3] that some
     [previous work][bitcoin core #24007] in Bitcoin Core could possibly
-    address this problem
+    address the problem with annex relay in some multiparty protocols.
 
 - **Draft BIP for silent payments:** Josie Baker and Ruben Somsen
   [posted][bs sp] to the Bitcoin-Dev mailing list a draft BIP for
@@ -54,7 +57,7 @@ This week's newsletter FIXME:harding
   preventing [output linking][topic output linking] that can
   significantly reduce the privacy of users (including users not
   directly involved in a transaction).  The draft goes into detail about
-  the benefits of the proposals, its tradeoffs, and how software can
+  the benefits of the proposal, its tradeoffs, and how software can
   effectively use it.  Several insightful comments have already been
   posted on the [PR][bips #1458] for the BIP.
 
@@ -177,3 +180,4 @@ Proposals (BIPs)][bips repo], [Lightning BOLTs][bolts repo], and
 [jager annex3]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2023-June/021743.html
 [bs sp]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2023-June/021750.html
 [review club 27600]: https://bitcoincore.reviews/27600
+[jager annex4]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2023-June/021737.html
