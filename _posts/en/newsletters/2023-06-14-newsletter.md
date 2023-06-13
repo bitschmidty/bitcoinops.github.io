@@ -158,7 +158,13 @@ Proposals (BIPs)][bips repo], [Lightning BOLTs][bolts repo], and
   configuration information in a single dictionary and also passes the
   state of all configuration options to restarted plugins.
 
-- [Eclair #2677][] Increase default max-cltv value ; Maybe use as a template / link to https://bitcoinops.org/en/newsletters/2019/10/23/#lnd-3595 FIXME:Xekyo
+- [Eclair #2677][] increases the default `max_cltv` from 1,008 blocks
+  (about one week) to 2,016 blocks (about two weeks). This extends
+  maximum permitted number of blocks until a lightning payment attempt
+  times out. The change is motivated by nodes on the network raising
+  their reserved time window to address an expiring HTLC
+  (`cltv_expiry_delta`) in response to high on-chain feerates. Similar
+  changes have been [merged to LND][lnd max_cltv] and CLN.
 
 - [Rust bitcoin #1890][] adds a method for counting the number of
   signature operations (sigops) in non-tapscript scripts.  The number of
@@ -181,3 +187,4 @@ Proposals (BIPs)][bips repo], [Lightning BOLTs][bolts repo], and
 [bs sp]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2023-June/021750.html
 [review club 27600]: https://bitcoincore.reviews/27600
 [jager annex4]: https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2023-June/021737.html
+[lnd max_cltv]: /en/newsletters/2019/10/23/#lnd-3595
