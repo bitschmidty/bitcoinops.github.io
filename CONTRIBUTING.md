@@ -97,18 +97,8 @@ diff -ruN _site _site.bak  # Compare the generated sites (-r for recursive, -u f
 
 ## Bitcoin Feature Matrix Data
 
-<<<<<<< HEAD
 The Bitcoin Feature Matrix section of the website is built from
 [YAML](https://yaml.org/) files located in [_data/matrix/](_data/matrix/).
-=======
-The compatibility matrix section of the website is built from
-[YAML](https://yaml.org/) files located in [_compat/en](_compat/en).
-The compatibility images (usability
-screenshots, logos) are located in [img/compatibility/](img/compatibility/) with
-sub-folders for each wallet or service. Make sure to optimize any png files using
-`optipng -o7 <filename>`. These files are free for anyone to repurpose/republish
-elsewhere.
->>>>>>> origin/master
 
 We welcome pull requests to the Bitcoin Feature Matrix, including
 testing the latest versions of previously tested products/services, adding new products/services, or adding features to test.

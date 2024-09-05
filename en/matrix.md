@@ -1,5 +1,5 @@
 ---
-layout: page              
+layout: page
 title: Bitcoin Feature Matrix
 permalink: /en/matrix/
 nowrap: true
@@ -60,7 +60,7 @@ th, td {
 }
 
 /* Style to keep the checkmark used for Alternate Implementation the Standard across all browsers  */
-.checkmark {   
+.checkmark {
   font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', 'Segoe UI Symbol', 'Arial', sans-serif;
   font-size: 1em; /* Set a fixed font size */
 }
@@ -74,7 +74,6 @@ th, td {
 </style>
 
 <center><p class="tracking-description">tracking interoperability of ₿itcoin products & services 🤝</p></center>
-
 
 <!-- Table for the Feature Checkboxes and the Legend -->
 <table style="border: 1px solid white;">
@@ -112,9 +111,6 @@ th, td {
   </tr>
 </table>
 
-
-
-
 <!-- Table for Features -->
 <table id="feature-tracker">
 
@@ -126,22 +122,12 @@ th, td {
     <th class="col-platform" style="display: none;color:blue;" colspan="3">Platform</th>
     <th class="col-hwinterface" style="display: none;" rowspan="2"><a href="https://bitcoinops.org/en/topics/hwi/">HWI</a></th>
 
-
-
-
     <th rowspan="2">Default <br/>Receive<br/> Address</th>
-
-
 
     <th colspan="3" style="color:blue;">Native Segwit</th>
     <th class="col-feebumping" style="display: none;color:blue;" colspan="4">Fee Bumping </th>
 
-
     <th class="col-descriptors" style="display: none;" rowspan="2"><a href="https://bitcoinops.org/en/topics/output-script-descriptors/">Descriptors</a></th>
-
-
-
-
 
     <th class="col-multipartytxn" style="display: none;color:blue;" colspan="6">Multi-Party Transactions </th>
 
@@ -153,11 +139,8 @@ th, td {
     <a href="https://bitcoinops.org/en/topics/silent-payments/">Silent <br>Payments</a><span class="tooltip">BIP352</span>
     </div></th>
 
-
-
     <th class="col-lightning" style="display: none;color:blue;" colspan="6"><div class="tooltip-container">Lightning<span class="tooltip">Lightning only sending (Pay Invoice) and receiving (Create Invoice) capabilities are considered.</span>
     </div></th>
-
 
     </tr>
     <tr>
@@ -169,57 +152,47 @@ th, td {
     <th class="col-platform" style="vertical-align:top;display: none;"><div class="tooltip-container">Web /<br> Browser<span class="tooltip">Y/N</span>
     </div></th>
 
-
-    <th style="vertical-align:top;"><div class="tooltip-container">  
+    <th style="vertical-align:top;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/bech32/">Bech32 <br/><font color="grey">P2WPKH<br/>P2WSH</font></a><span class="tooltip">BIP173</span>
     </div></th>
 
-    <th style="vertical-align:top;"><div class="tooltip-container">  
+    <th style="vertical-align:top;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/bech32/">Bech32m <br/><font color="grey">P2TR</font></a><span class="tooltip">BIP350</span>
     </div></th>
 
+    <th style="vertical-align:top;">Native <br/>Segwit<br/> Change</th>
 
-    <th style="vertical-align:top;">Native <br/>Segwit<br/> Change</th>  
-
-    <th class="col-feebumping" style="display: none;"><div class="tooltip-container">    
+    <th class="col-feebumping" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/replace-by-fee/">Full RBF<br><font color="grey">Bump<br>Fee</font></a><span class="tooltip">full-RBF</span>
     </div></th>
 
-    <th class="col-feebumping" style="display: none;"><div class="tooltip-container">    
+    <th class="col-feebumping" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/replace-by-fee/">Full RBF<br><font color="grey">Cancel<br>TXN</font></a><span class="tooltip">full-RBF</span>
     </div></th>
 
-    <th class="col-feebumping" style="display: none;"><div class="tooltip-container">    
+    <th class="col-feebumping" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/replace-by-fee/">Full RBF<br><font color="grey">Notification</font></a><span class="tooltip">full-RBF</span>
     </div></th>
 
+    <th class="col-feebumping" style="display: none;"><a href="https://bitcoinops.org/en/topics/cpfp/">CPFP</a></th>
 
-    <th class="col-feebumping" style="display: none;"><a href="https://bitcoinops.org/en/topics/cpfp/">CPFP</a></th>  
-
-
-    <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">    
+    <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/psbt/">PSBT<br><font color="grey">Version</font></a><span class="tooltip">BIP174 & BIP370</span>
     </div></th>
 
-    <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">    
+    <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/psbt/">PSBT<br><font color="grey">Export</font></a><span class="tooltip">BIP174 & BIP370</span>
     </div></th>
 
-    <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">    
+    <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/psbt/">PSBT<br><font color="grey">Update / <br>Finalize</font></a><span class="tooltip">BIP174 & BIP370</span>
     </div></th>
-
-
-
-
 
     <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/musig/">MuSig2</a><span class="tooltip">BIP327</span>
     </div></th>
 
-
-    <th class="col-multipartytxn" style="display: none;"><a href="https://bitcoinops.org/en/topics/coinjoin/">Coinjoin</a></th>  
-
+    <th class="col-multipartytxn" style="display: none;"><a href="https://bitcoinops.org/en/topics/coinjoin/">Coinjoin</a></th>
 
     <th class="col-multipartytxn" style="display: none;"><div class="tooltip-container">
     <a href="https://bitcoinops.org/en/topics/payjoin/">Payjoin<font color="orange">*</font></a><span class="tooltip">BIP78 and Alternate Implementations are considered</span>
@@ -242,7 +215,7 @@ th, td {
   <tbody>
   {% assign tools = site.data.matrix | sort %}    <!-- Liquid Syntax assigning the YAML data in the directory to the variable tools, sorted -->
 
-  {% for wrapped_tool in tools %}   
+  {% for wrapped_tool in tools %}
     {% assign tool = wrapped_tool[1] %}
       {% if tool.feature %}  <!-- YAML files must have "feature" attribute -->
         <tr>
@@ -311,10 +284,10 @@ th, td {
           <td class="col-multipartytxn" style="display: none;">
           {% include functions/matrix-cell-4-input.md input="BIP78 - " input2=tool.feature.payjoin_BIP78 input3=tool.feature.payjoin_alternate input4=tool.feature.payjoin_alternate_name %}
 
-          <td class="col-pc_silentpayments" style="display: none;">  
+          <td class="col-pc_silentpayments" style="display: none;">
           {% include functions/matrix-cell-1-input.md state=tool.feature.payment_code %}
 
-          <td class="col-pc_silentpayments" style="display: none;">  
+          <td class="col-pc_silentpayments" style="display: none;">
           {% include functions/matrix-cell-1-input.md state=tool.feature.silent_payments_BIP352 %}
 
           <td class="col-pc_silentpayments" style="display: none;">
@@ -331,7 +304,6 @@ th, td {
           <td class="col-lightning" style="display: none;">
           {% include functions/matrix-cell-1-input.md state=tool.feature.lightning_lnurl_hrla %}
 
-
         </tr>
       {% endif %}
 
@@ -340,12 +312,11 @@ th, td {
   </tbody>
   </table>
 
-
   <table>
 
   <tr style="background-color: transparent;">
   <td colspan="15" style="text-align:left;font-size:14px;border-style:hidden;" >
-  <span class="bold">Notes:</span><br/>   
+  <span class="bold">Notes:</span><br/>
   &#x1F538; Features with alternate implementations are denoted with <font color="orange" size="3">*</font>, hover for details.<br/>
   &#x1F538; To qualify as having Bech32 sending support, a product should be able to send to both P2WPKH and P2WSH<br/>
   &#x1F538; To qualify as having Bech32 receiving support, it is sufficient to receive to either P2WPKH or P2WSH<br/>
@@ -354,7 +325,7 @@ th, td {
   </tr>
   <tr style="background-color: transparent;">
   <td colspan="15" style="text-align:left;font-size:14px;border-style:hidden;" >
-  <span class="bold">Approach:</span><br/>   
+  <span class="bold">Approach:</span><br/>
   &#x1F538; The initial features within the matrix have been selected by bitcoinops with a focus on interoperability.  <br/>
   &#x1F538; The matrix will be split by category, once enough results are collected.<br/>
   &#x1F538; New feature as well as product/service requests are welcome!  Open a PR in the Optech Github.<br/>
