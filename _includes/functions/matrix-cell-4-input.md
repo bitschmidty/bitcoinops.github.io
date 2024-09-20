@@ -30,8 +30,7 @@
 {{cell_emoji}}
 
 {% if include.input3 == "Full Support (send & receive)" or include.input3 == "Send Support" %}
-      {% if cell_emoji == "&#x2705;" or cell_emoji == "&#x1F4B8;" %}
-        <!--- Denotes an alternate in addition to a preferred implementation--->
+      {% if cell_emoji == "&#x2705;" or cell_emoji == "&#x1F4B8;" %} <!--- Denotes an alternate in addition to a preferred implementation--->
         <font size="4"><b>&#178;</b></font>
       {% endif %}
 {% endif %}

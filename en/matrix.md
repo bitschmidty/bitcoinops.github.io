@@ -3,8 +3,10 @@ layout: page
 title: Bitcoin Feature Matrix
 permalink: /en/matrix/
 nowrap: true
+redirect_from:
+  - /en/compatibility/
+  - en/compatibility/wasabi/
 ---
-<!-- The above are YAML Style Meta-Data -->
 
 <head>
 
@@ -75,7 +77,6 @@ th, td {
 
 <center><p class="tracking-description">tracking interoperability of ₿itcoin products & services 🤝</p></center>
 
-<!-- Table for the Feature Checkboxes and the Legend -->
 <table style="border: 1px solid white;">
   <colgroup>
       <col style="width:15%"/>
@@ -111,7 +112,6 @@ th, td {
   </tr>
 </table>
 
-<!-- Table for Features -->
 <table id="feature-tracker">
 
   <thead>   <!--  the <thead> tag is used to define the header section of a table -->
