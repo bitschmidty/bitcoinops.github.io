@@ -5,7 +5,7 @@ permalink: /en/matrix/
 nowrap: true
 redirect_from:
   - /en/compatibility/
-  - en/compatibility/wasabi/
+  - /en/compatibility/wasabi/
 ---
 
 <head>

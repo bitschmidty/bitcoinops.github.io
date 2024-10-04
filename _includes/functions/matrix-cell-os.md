@@ -13,7 +13,7 @@
     {% assign cell_emoji = cell_emoji | replace: "Linux", linux_icon %}
     {% assign cell_emoji = cell_emoji | replace: "Windows", windows_icon %}
 
-     <!--- Ensure Apple is only shown once --->
+    <!--- Ensure Apple is only shown once --->
     {% assign cell_emoji = cell_emoji | replace: "iOS, OS", "OS" %}
     {% assign cell_emoji = cell_emoji | replace: "iOS", apple_icon %}
     {% assign cell_emoji = cell_emoji | replace: "OS", apple_icon %}
