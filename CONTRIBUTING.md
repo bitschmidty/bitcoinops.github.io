@@ -97,17 +97,18 @@ diff -ruN _site _site.bak  # Compare the generated sites (-r for recursive, -u f
 
 ## Bitcoin Feature Matrix Data
 
-The Bitcoin Feature Matrix section of the website is built from
-[YAML](https://yaml.org/) files located in [_data/matrix/](_data/matrix/).
+The data in the Bitcoin Feature Matrix section of the website is:
 
-We welcome pull requests to the Bitcoin Feature Matrix, including
-testing the latest versions of previously tested products/services, adding new products/services, or adding features to test.
+- collected via a Google Form
+- transformed into [YAML](https://yaml.org/) files via a Google script
+- located in [_data/matrix/](_data/matrix/)
 
-When contributing changes to the Bitcoin Feature Matrix data files, review and adhere to
-the YAML schema located in [_data/schemas/compatibility.yaml](_data/schemas/compatibility.yaml).
+We welcome contributions/suggestions to the Bitcoin Feature Matrix:
 
-If you believe any of the data in the Bitcoin Feature Matrix is incorrect, you
-can also [submit an issue](../../issues/) detailing what is wrong and how to correct it.
+- Add new products/services via the [Google Form](https://forms.gle/Vd7whDTTnyV6iNMk6)
+- Request data updates via [issue submission](../../issues/)
+- Propose new features to test via [issue submission](../../issues/)
 
-If you want to request a new service or wallet be evaluated, or a new test that you
-think is useful, please also submit an issue.
+Changes shall be integrated during regular site updates.
+
+Questions and requests can also be directed at [steven@bitcoinops.org](mailto:steven@bitcoinops.org).
